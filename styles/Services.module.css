@@ -1,5 +1,4 @@
-
-.about_container {
+.services_container {
     min-height: 100vh;
     padding: 4rem 0;
     flex: 1;
@@ -9,4 +8,3 @@
     align-items: center;
     background-color: aqua;
 }
-  
