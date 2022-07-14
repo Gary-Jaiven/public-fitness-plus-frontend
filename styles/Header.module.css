@@ -1,0 +1,25 @@
+
+.nav_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 0.8rem 1.4rem;
+    color: #ffffff;
+}
+
+.nav_container ul {
+    list-style-type: none;
+    padding-right: 2rem;
+    color: #ffffff;
+}
+
+.nav_container li {
+    display: inline-block;
+    margin: 0 1.4rem;
+}
+
+.nav_container ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}

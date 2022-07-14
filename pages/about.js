@@ -3,8 +3,9 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navbar from './components/Navbar'
 import GreySection from './components/GreySection'
+import Layout from '../components/layout'
 
-export default function Home() {
+export default function About() {
   return (
     <div className={styles.container}>
       <Head>
@@ -71,5 +72,13 @@ export default function Home() {
         </a>
       </footer>
     </div>
+  )
+}
+
+About.getLayout = function getLayout(page){
+  return (
+    <Layout>
+      {page}
+    </Layout>
   )
 }

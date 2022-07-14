@@ -1,10 +1,12 @@
+
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Layout from '../components/layout'
 import Navbar from './components/Navbar'
 import GreySection from './components/GreySection'
 
-export default function services() {
+export default function Services() {
   return (
     <div className={styles.container}>
       <Head>
@@ -50,5 +52,14 @@ export default function services() {
         </a>
       </footer>
     </div>
+  )
+}
+
+    
+Services.getLayout = function getLayout(page){
+  return (
+    <Layout>
+      {page}
+    </Layout>
   )
 }

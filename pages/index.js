@@ -1,10 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Layout from '../components/layout'
 import Navbar from './components/Navbar'
 import CardGroup from './components/Card'
 
-export default function home() {
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
@@ -103,5 +104,13 @@ export default function home() {
         </ul>
       </footer>
     </div>
+  )
+}
+
+Home.getLayout = function getLayout(page){
+  return (
+    <Layout>
+      {page}
+    </Layout>
   )
 }

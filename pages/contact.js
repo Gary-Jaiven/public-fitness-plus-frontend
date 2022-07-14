@@ -2,8 +2,9 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navbar from './components/Navbar'
+import Layout from '../components/layout'
 
-export default function contact(){
+export default function Contact(){
     return(
         <div className={styles.container}>
       <Head>
@@ -59,4 +60,13 @@ export default function contact(){
       </footer>
     </div>
     )
+}
+
+
+Contact.getLayout = function getLayout(page){
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  )
 }
