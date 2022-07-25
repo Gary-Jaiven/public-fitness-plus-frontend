@@ -21,7 +21,7 @@ export default function Contact(){
               <div className="form-group">
                 <div className="form-row">
                   <div className="col">
-                    <input type="text" name="name" class="form-control" placeholder="Full Name" required />
+                    <input type="text" name="name" className="form-control" placeholder="Full Name" required />
                   </div>
                   <div className="col">
                     <input type="email" name="email" className="form-control" placeholder="Email Address" required />

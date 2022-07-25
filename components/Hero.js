@@ -14,7 +14,13 @@ export default function Hero() {
             </div>
           </div>
           <div className={styles.hero_image_container}>
-            <img src={"./fitnes-plus-hero.png"} className={styles.heroImg} alt="Fitness Plus"/>
+            <Image src="/fitnes-plus-hero.png" 
+              width="814"
+              height="999"
+              alt="Fitness Plus"
+              layout="responsive"
+              className={styles.heroImg} 
+            />
           </div>
         </div>
       </section>

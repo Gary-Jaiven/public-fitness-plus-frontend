@@ -10,7 +10,14 @@ export default function Home() {
         <Hero />
         <section className={styles.grids}>
           <div>
-            <img src={"./homeImage1.png"} className={styles.image} alt="Fitness Plus"/>
+            <Image 
+              src="/homeImage1.png" 
+              alt="Fitness Plus" 
+              width="526" 
+              height="518"
+              layout="responsive"
+              className={styles.image}
+            />
           </div>
           <div>
             <h3>Personal Training Made for You</h3>
@@ -45,32 +52,38 @@ export default function Home() {
             <button className={styles.button}>Schedule Your Free Consultation.</button>
           </div>
           <div>
-            <img src={"./homeImage2.png"} className={styles.image}/>
+            <Image 
+              src="/homeImage2.png" 
+              alt="Second Image" 
+              width="448" 
+              height="420"
+              layout="responsive"
+              className={styles.image}/>
           </div>
         </section>
         
         <OurTeam />
-        <section classname={styles.contactTeam}>
-          <div class="container">
+        {/* <section className={styles.contactTeam}>
+          <div className="container">
             <h1>FormSubmit Demo</h1>
             <form target="_blank" action="https://formsubmit.co/your@email.com" method="POST">
-              <div class="form-group">
-                <div class="form-row">
-                  <div class="col">
-                    <input type="text" name="name" class="form-control" placeholder="Full Name" required />
+              <div className="form-group">
+                <div className="form-row">
+                  <div className="col">
+                    <input type="text" name="name" className="form-control" placeholder="Full Name" required />
                   </div>
-                  <div class="col">
-                    <input type="email" name="email" class="form-control" placeholder="Email Address" required />
+                  <div className="col">
+                    <input type="email" name="email" className="form-control" placeholder="Email Address" required />
                   </div>
                 </div>
               </div>
-              <div class="form-group">
-                <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+              <div className="form-group">
+                <textarea placeholder="Your Message" className="form-control" name="message" rows="10" required></textarea>
               </div>
-              <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+              <button type="submit" className="btn btn-lg btn-dark btn-block">Submit Form</button>
             </form>
           </div>
-        </section>
+        </section> */}
      </>
   )
 }
