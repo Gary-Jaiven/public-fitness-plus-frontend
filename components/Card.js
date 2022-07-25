@@ -1,6 +1,8 @@
+import styles from '../styles/TeamCard.module.css'
+
 export default function CardGroup(){
     return(
-        <div className="teamCardWrapper">
+        <div className={styles.teamCardWrapper}>
             <Card 
             img="../team/11_sheila-kalas.png"
             memberName="Sheila Kalas"
@@ -81,12 +83,14 @@ export default function CardGroup(){
 
 function Card(props){
     return(
-        <div className="teamCard">
-            <div classname="cardBody">
-                <img src={props.img} class="cardImage"/>
-                <h3 className="memberName">{props.memberName}</h3>
-                <p className="jobTitle">{props.jobTitle}</p>
-                <button className="cardButton">Learn more about {props.firstName}</button>
+        <div className={styles.teamCard}>
+            <div className={styles.card_image_container}>
+                <img src={props.img} className={styles.cardImage}/>
+            </div>
+            <div className={styles.card_content_container}>
+                <div className={styles.card_trainer_name}>{props.memberName}</div>
+                <div className={styles.jobTitle}>{props.jobTitle}</div>
+                <button className={styles.cardButton}>Learn more about {props.firstName}</button>
             </div>
         </div>
     )
