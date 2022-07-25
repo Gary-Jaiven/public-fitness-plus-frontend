@@ -9,4 +9,21 @@
     align-items: center;
     background-color: aqua;
 }
+
+/* About page begin */
+.aboutgrids {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, 30em);
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.aboutTitles{
+    padding:5em;
+    text-align: center;
+}
+  /* About page end */
   

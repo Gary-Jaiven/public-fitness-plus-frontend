@@ -1,0 +1,59 @@
+.teamCardWrapper{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, 30rem);
+    gap: 1rem;
+    justify-content: center;
+    background-color: white;
+    padding: 3em;
+}
+  
+.teamCard{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow:hidden;
+    box-shadow: 0, 2px, 20px;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+    background-color: #F7FAE6;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card_image_container {
+    display: grid;
+    align-content: end;
+}
+
+.card_content_container {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    width: 80%;
+}
+  
+.cardImage{
+    max-height: 10rem;
+    width: auto;
+}
+
+.card_trainer_name {
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
+.jobTitle {
+    margin-bottom: 1em;
+}
+
+.cardButton{
+    background-color: #757013; /* Green */
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: Open Sans;
+  }
+  
+  
