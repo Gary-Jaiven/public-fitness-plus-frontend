@@ -14,18 +14,18 @@
 
   .hero_text_container {
     display: grid;
-    align-items: center;
+    align-content: center;
     justify-content: center;
   }
 
   .hero_text_content {
     display: grid;
-    justify-content: end;
-    height: 15vh;
+    /* justify-content: end; */
+    /* height: 15vh; */
   }
 
-  .hero_text_content h1 {
-    margin: 0px;
+  .hero_text_content .title {
+    font-size: 3rem;
   }
 
   .hero_image_container {
