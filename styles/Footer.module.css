@@ -1,10 +1,6 @@
 .footer {
-    color: white;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-    padding: 1rem;
+    justify-content: center;
     width: 100vw;
     bottom:0;
     height: 10vh;
@@ -12,11 +8,23 @@
     font-size: 18px;
     background-color: #757013;
     z-index: 1;
-  }
-  .footer ul{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-  }
+}
+
+.footer_container {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  width: 80vw;
+}
+
+
+.footer ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}

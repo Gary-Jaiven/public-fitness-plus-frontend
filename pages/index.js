@@ -8,58 +8,72 @@ export default function Home() {
   return (
     <>
         <Hero />
-        <section className={styles.grids}>
-          <div>
-            <Image 
-              src="/homeImage1.png" 
-              alt="Fitness Plus" 
-              width="526" 
-              height="518"
-              layout="responsive"
-              className={styles.image}
-            />
-          </div>
-          <div>
-            <h3>Personal Training Made for You</h3>
-            <p>At Fitness Plus, we believe in individual attention. We train one session at a time, with your experienced and educated personal trainer. Your training sessions at Fitness Plus are specifically designed for you: your body, your health and fitness goals, your lifestyle, your time, your budget.</p>
-            <button className={styles.button}>Schedule Your Free Consultation.</button>
-          </div>
-        </section>
-        <section className={styles.strongOver50}>
-          <div style={{backgroundImage: "url(/Rob_RoseMarie.png)", backgroundSize: 'cover', }}>
-            <div className={styles.strongOver50} style={{ background: "rgba(117,112,21,.9)" }}>
-              <div className={styles.strongOver50Content}>
-                <h1>Strong Over 50</h1>
-              </div>
-              <div className={styles.strongOver50Content}>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
-              </div>
-              <div className={styles.strongOver50Content}>
-              <button className={styles.button2}>Schedule Your Free Consultation.</button>
-            </div>
-            </div>
-          </div>
-        </section>
-        <section className={styles.grids}>
-          <div>
-            <h3>Committed to Improving Your Health</h3>
-            <p>We offer a variety of different ways to reach your health and fitness goals:
+        <section className={styles.contactBar}>
+          <div style={{width: '80vw', textAlign: 'right'}}> 859.269.9280</div>
 
-                Personal Training
-                Strong Over 50
-                Injury Rehab Services
-                Therapeutic Massage</p>
-            <button className={styles.button}>Schedule Your Free Consultation.</button>
+        </section>
+        <section className="section_container">
+          <div className="section_content_two_column">
+            <div className={styles.home_section_one_image_container}>
+              <Image 
+                src="/homeImage1.png" 
+                alt="Fitness Plus" 
+                width="526" 
+                height="518"
+                layout="responsive"
+              />
+            </div>
+            <div>
+              <div>
+                <h3>Personal Training Made for You</h3>
+                <p>At Fitness Plus, we believe in individual attention. We train one session at a time, with your experienced and educated personal trainer. Your training sessions at Fitness Plus are specifically designed for you: your body, your health and fitness goals, your lifestyle, your time, your budget.</p>
+                <button className={styles.button}>Schedule Your Free Consultation.</button>
+              </div>
+            </div>
           </div>
-          <div>
-            <Image 
-              src="/homeImage2.png" 
-              alt="Second Image" 
-              width="448" 
-              height="420"
-              layout="responsive"
-              className={styles.image}/>
+        </section>
+        <section 
+          className="section_container" 
+          style={{backgroundImage: "url(/Rob_RoseMarie.png)", backgroundSize: 'cover', }}
+        >
+          <div className="overlay_container">
+            <div className="section_content_one_column">
+              <div className={styles.strongOver50}>
+                <div className={styles.strongOver50Content}>
+                  <h1>Strong Over 50</h1>
+                </div>
+                <div className={styles.strongOver50Content}>
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
+                </div>
+                <div className={styles.strongOver50Content}>
+                  <button className={styles.button2}>Schedule Your Free Consultation.</button>
+                </div>
+              </div>
+            </div>
           </div>
+        </section>
+        <section className="section_container">
+          <div className="section_content_two_column">
+            <div>
+              <h3>Committed to Improving Your Health</h3>
+              <p>We offer a variety of different ways to reach your health and fitness goals:
+
+                  Personal Training
+                  Strong Over 50
+                  Injury Rehab Services
+                  Therapeutic Massage</p>
+              <button className={styles.button}>Schedule Your Free Consultation.</button>
+              </div>
+              <div>
+                <Image 
+                  src="/homeImage2.png" 
+                  alt="Second Image" 
+                  width="448" 
+                  height="420"
+                  layout="responsive"
+                  className={styles.image}/>
+              </div>
+            </div>
         </section>
         
         <OurTeam />

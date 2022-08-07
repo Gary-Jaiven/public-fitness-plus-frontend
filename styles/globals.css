@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
+
 html,
 body {
   padding: 0;
@@ -22,3 +24,4 @@ a {
   background-color: #797A71;
   color: white;
 }
+

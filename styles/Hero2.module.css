@@ -17,13 +17,14 @@
     align-items: center;
 }
 
+
 .hero_image_container {
     display: grid;
-    height: 100%;
-    background-image: url('/fitness-plus-hero-no-margin.png');
+    height: 90%;
+    background-image: url('/fitnes-plus-hero.png');
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: auto;
+    background-size: contain;
 }
 
 .hero_button {
@@ -43,4 +44,36 @@
 
 .title {
     margin: 0px;
+    color: #454D39;
+    font-size: 4rem;
+    margin-bottom: 10vh;
 }
+
+.subtitle {
+    color: #454D39;
+}
+
+
+@media (max-width: 1200px){
+    
+  }
+
+  @media (max-width: 992px){
+    .hero_content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .hero_image_container{
+        display: none;
+    }
+  } 
+  
+  @media (max-width: 768px){
+    .title {
+        font-size: 3rem;
+    }
+
+    .hero_image_container{
+        display: none;
+    }
+  }

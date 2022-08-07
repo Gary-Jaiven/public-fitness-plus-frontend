@@ -12,14 +12,10 @@ export default function Hero() {
                 <button className={styles.hero_button}>Schedule Your Free Consultation.</button>
               </div>
             </div>
-            <div className={styles.hero_image_container}>
-              {/* <Image src="/fitnes-plus-hero.png" 
-                width="814"
-                height="999"
-                alt="Fitness Plus"
-                className={styles.hero_image}
-                layout="responsive"
-              />  */}
+            <div className={styles.hero_image_placement}>
+              <div className={styles.hero_image_container}>
+                
+              </div>
             </div>
         </div>
       </section>

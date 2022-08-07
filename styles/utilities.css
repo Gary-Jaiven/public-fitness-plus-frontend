@@ -1,0 +1,27 @@
+
+.section_container {
+    display: grid;
+    justify-content: center;
+  }
+  
+.section_content_two_column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 80vw;
+    padding: 2rem 0;
+}
+
+.section_content_one_column {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 60vw;
+}
+
+
+.overlay_container {
+    background-color: rgba(117,112,21,.9);
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+}
