@@ -1,21 +1,28 @@
 
-.section_container {
+.section_container_two_column {
     display: grid;
     justify-content: center;
   }
+
+.section_container_one_column {
+    display: grid;
+    justify-content: center;
+}
   
 .section_content_two_column {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     width: 80vw;
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
 .section_content_one_column {
     display: grid;
     grid-template-columns: 1fr;
     width: 60vw;
+    justify-content: center;
+    padding: 4rem 0;
 }
 
 
@@ -24,4 +31,21 @@
     width: 100vw;
     display: grid;
     justify-content: center;
+}
+
+@media (max-width: 1200px){
+    
+}
+
+@media (max-width: 992px){
+    .section_content_two_column, .section_content_one_column{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 80vw;
+        padding: 2rem 0;
+    }
+} 
+
+@media (max-width: 768px){
+  
 }
