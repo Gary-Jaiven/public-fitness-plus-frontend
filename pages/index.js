@@ -7,12 +7,14 @@ import OurTeam from '../components/OurTeam'
 export default function Home() {
   return (
     <>
+        {/* HERO */}
         <Hero />
+        {/* CONTACT BAR */}
         <section className={styles.contactBar}>
           <div style={{width: '80vw', textAlign: 'right'}}> 859.269.9280</div>
-
         </section>
-        <section className="section_container">
+        {/* PERSONAL TRAINING MADE FOR YOU */}
+        <section className="section_container_two_column">
           <div className="section_content_two_column">
             <div className={styles.home_section_one_image_container}>
               <Image 
@@ -23,17 +25,16 @@ export default function Home() {
                 layout="responsive"
               />
             </div>
-            <div>
-              <div>
-                <h3>Personal Training Made for You</h3>
-                <p>At Fitness Plus, we believe in individual attention. We train one session at a time, with your experienced and educated personal trainer. Your training sessions at Fitness Plus are specifically designed for you: your body, your health and fitness goals, your lifestyle, your time, your budget.</p>
-                <button className={styles.button}>Schedule Your Free Consultation.</button>
-              </div>
+            <div style={{display: 'grid', alignContent: 'center'}}>
+              <h3>Personal Training Made for You</h3>
+              <p>At Fitness Plus, we believe in individual attention. We train one session at a time, with your experienced and educated personal trainer. Your training sessions at Fitness Plus are specifically designed for you: your body, your health and fitness goals, your lifestyle, your time, your budget.</p>
+              <button className={styles.button}>Schedule Your Free Consultation.</button>
             </div>
           </div>
         </section>
+        {/* STRONG OVER 50 */}
         <section 
-          className="section_container" 
+          className="section_container_one_column" 
           style={{backgroundImage: "url(/Rob_RoseMarie.png)", backgroundSize: 'cover', }}
         >
           <div className="overlay_container">
@@ -52,9 +53,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="section_container">
+        {/* SERVICES */}
+        <section className="section_container_two_column">
           <div className="section_content_two_column">
-            <div>
+            <div style={{display: 'grid', alignContent: 'center'}}>
               <h3>Committed to Improving Your Health</h3>
               <p>We offer a variety of different ways to reach your health and fitness goals:
 
@@ -63,8 +65,8 @@ export default function Home() {
                   Injury Rehab Services
                   Therapeutic Massage</p>
               <button className={styles.button}>Schedule Your Free Consultation.</button>
-              </div>
-              <div>
+            </div>
+            <div>
                 <Image 
                   src="/homeImage2.png" 
                   alt="Second Image" 
@@ -75,29 +77,27 @@ export default function Home() {
               </div>
             </div>
         </section>
-        
+        {/* OUR TEAM */}
         <OurTeam />
-        {/* <section className={styles.contactTeam}>
-          <div className="container">
-            <h1>FormSubmit Demo</h1>
-            <form target="_blank" action="https://formsubmit.co/your@email.com" method="POST">
-              <div className="form-group">
-                <div className="form-row">
-                  <div className="col">
-                    <input type="text" name="name" className="form-control" placeholder="Full Name" required />
-                  </div>
-                  <div className="col">
-                    <input type="email" name="email" className="form-control" placeholder="Email Address" required />
-                  </div>
+        <section className="section_container_one_column" style={{backgroundColor: '#F7FAE6', paddingTop: '2rem', paddingBottom: '2rem'}}>
+          <h1>FormSubmit Demo</h1>
+          <form>
+            <div className="form-group">
+              <div className="form-row">
+                <div className="col">
+                  <input type="text" name="name" className="form-control" placeholder="Full Name" required />
+                </div>
+                <div className="col">
+                  <input type="email" name="email" className="form-control" placeholder="Email Address" required />
                 </div>
               </div>
-              <div className="form-group">
-                <textarea placeholder="Your Message" className="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <button type="submit" className="btn btn-lg btn-dark btn-block">Submit Form</button>
-            </form>
-          </div>
-        </section> */}
+            </div>
+            <div className="form-group">
+              <textarea placeholder="Your Message" className="form-control" name="message" rows="10" required></textarea>
+            </div>
+            <button type="submit" className="btn btn-lg btn-dark btn-block">Submit Form</button>
+          </form>
+        </section>
      </>
   )
 }

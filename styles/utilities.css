@@ -33,11 +33,20 @@
     justify-content: center;
 }
 
+.title {
+    font-size: 4rem;
+    color: white;
+    margin: 0px;
+}
+
 @media (max-width: 1200px){
     
 }
 
 @media (max-width: 992px){
+    .title {
+        font-size: 2rem;
+    }
     .section_content_two_column, .section_content_one_column{
         display: grid;
         grid-template-columns: 1fr;
