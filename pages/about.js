@@ -13,7 +13,7 @@ export default function About() {
       </div>
       <div className='section_container_two_column'>
         <section className='section_content_two_column'>
-          <div>
+          <div style={{display: 'grid', alignContent: 'center'}}>
             <h3>Welcome to Fitness Plus</h3>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
           </div>
@@ -25,13 +25,13 @@ export default function About() {
           <div>
             <Image src={"/aboutImage2.png"} alt="A female trainer in Lexington, KY helps with a Strong Over 50 client" layout='responsive' width='500' height='365' />
           </div>
-          <div>
+          <div style={{display: 'grid', alignContent: 'center'}}>
             <h3>How it Works</h3>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
           </div>
         </section>
         <section className='section_content_two_column'>
-          <div>
+          <div style={{display: 'grid', alignContent: 'center'}}>
             <h3>Fitness Plus History and Philosophy</h3>
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
           </div>
