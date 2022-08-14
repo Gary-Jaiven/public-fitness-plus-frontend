@@ -18,7 +18,7 @@ export default function Services() {
         <section className={styles.servicesWrapper}>
             <div className={styles.servicesBigCard}>
               <div className={styles.servicesBigCardBody}>
-                <img src={"./aboutImage2.png"} className={styles.servicesBigCardImage}/>
+                {/* <img src={"./aboutImage2.png"} className={styles.servicesBigCardImage}/> */}
                 <h3 className={styles.servicesCardTitle}>Strong Over 50</h3>
                 <p className={styles.servicesCardDescription}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
                 <button className="cardButton">Learn more.</button>
