@@ -1,4 +1,4 @@
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 import CardGroup from '../components/Card'
 
 export default function Team() {

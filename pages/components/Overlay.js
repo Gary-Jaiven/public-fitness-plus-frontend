@@ -1,7 +1,3 @@
-import styles from '../../styles/Home.module.css'
-// import background from '../public/Rob_RoseMarie.png'
-import { withRouter } from 'next/router'
-
 var collectionWindowStyle = {
     div:{
         backgroundImage: "url({/Rob_RoseMarie.png})",
@@ -25,6 +21,6 @@ var collectionWindowStyle = {
 
 export default function Overlay(){
     return <div style={collectionWindowStyle.div}>
-        <h1>This is my content. Bitch.</h1>
+        <h1></h1>
     </div>
 }
