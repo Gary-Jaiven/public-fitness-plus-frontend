@@ -20,10 +20,12 @@ export default function Team() {
           </div>
         </section>
         <CardGroup />
-        <section>
-            <h2>Lorem ipsum dolor sit amet</h2>
-            <button>Schedule Your Free Consultation.</button>
-        </section>
+        <div className='section_container_one_column' style={{margin: '4rem 0rem'}}>
+          <section className='section_content_one_column'>
+            <div className='sub_title_black' style={{textAlign: 'center', marginBottom: '1rem'}}>Lorem ipsum dolor sit amet</div>
+            <button className='button' style={{margin: '0 auto'}}>Schedule Your Free Consultation.</button>
+          </section>
+        </div>
     </div>
   )
 }

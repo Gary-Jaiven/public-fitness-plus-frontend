@@ -3,11 +3,9 @@ import Layout from '../components/Layout'
 
 export default function Contact(){
     return(
-        <div className={styles.container}>
-      <main className={styles.contactMain}>
         <section className={styles.contactHero}>
           <div style={{backgroundImage: "url(/Sheila_Kalas_main.jpg)", backgroundSize: 'cover', }}>
-            <div className={styles.contactHeros} style={{ background: "rgba(117,112,21,.9)" }}>
+            <div style={{ background: "rgba(117,112,21,.9)" }}>
               <div className={styles.contactStrongOver50Content}>
                 <h1>Contact Us</h1>
                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
@@ -34,8 +32,6 @@ export default function Contact(){
             </form>
           </div>
         </section>
-      </main>
-    </div>
     )
 }
 
