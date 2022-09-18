@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default function Services() {
   return (
     <div>
-      <section style={{height: '90vh'}}>
+      {/* <section style={{height: '90vh'}}>
           <div style={{backgroundImage: "url(/Client_Malinda_ChrisWilliams.jpg)", backgroundSize: 'cover', height: '90vh'}}>
             <div style={{ background: "rgba(117,112,21,.9)", height: '90vh', display: 'grid', justifyContent: 'center', alignContent: 'center' }}>
               <div>
@@ -13,7 +13,7 @@ export default function Services() {
               </div>
             </div>
           </div>
-      </section>
+      </section> */}
       <section className='section_container_one_column'>
           <div className='section_content_one_column'>
             <h2 style={{textAlign: 'center'}}>Lorem ipsum dolor sit amet</h2>

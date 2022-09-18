@@ -1,0 +1,32 @@
+.profileContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #F7FAE6;
+}
+
+.imgContainer {
+   background: rgba(117,112,21,.9);
+   height: 90vh;
+   width: 50vw;
+   display: grid;
+   justify-content: center;
+   align-content: center;
+}
+
+.trainerImage {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.bioContainer {
+    display: grid;
+    align-content: center;
+    background-color: white;
+}
+
+.bioContent {
+    padding-left: 2rem;
+    width: 80%
+}
