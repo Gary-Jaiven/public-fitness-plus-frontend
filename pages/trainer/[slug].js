@@ -5,9 +5,10 @@ import imageUrlBuilder from '@sanity/image-url'
 import Image from 'next/image'
 import styles from '../../styles/Bio.module.css'
 
-export const Trainer = ({name, bio, image}) => {
+export const Trainer = ({name, bio, image, youtube}) => {
     const [imageUrl, setImageUrl] = useState('')
-    console.log(imageUrl)
+    console.log(youtube)
+    const youtubeEmbed = 'https://www.youtube.com/embed/' + youtube
 
     useEffect(() => {
         const builder = imageUrlBuilder({
@@ -22,19 +23,29 @@ export const Trainer = ({name, bio, image}) => {
     
 
     return (
-        <div style={{height: '90vh'}} className={styles.profileContainer}>
-            <div style={{backgroundImage: "url(/Client_Malinda_ChrisWilliams.jpg)", backgroundSize: '100% 100%'}}>
-                <div className={styles.imgContainer}>
-                    {imageUrl && <img src={imageUrl} className={styles.trainerImage} alt='Sheila' />}
+        <>
+            <section style={{height: '90vh'}} className={styles.profileContainer}>
+                <div style={{backgroundImage: "url(/Client_Malinda_ChrisWilliams.jpg)", backgroundSize: '100% 100%'}}>
+                    <div className={styles.imgContainer}>
+                        {imageUrl && <img src={imageUrl} className={styles.trainerImage} alt='Sheila' />}
+                    </div>
                 </div>
-            </div>
-            <div className={styles.bioContainer}>
-                <div className={styles.bioContent}>
-                    {name}
-                    <SanityBlockContent blocks={bio}/>
+                <div className={styles.bioContainer}>
+                    <div className={styles.bioContent}>
+                        {name}
+                        <SanityBlockContent blocks={bio}/>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </section>
+            <section style={{textAlign: 'center', marginTop: '5rem'}}>
+                Quote here
+            </section>
+            <section className={styles.videoContainer}>
+                <div></div>
+                <iframe className={styles.youtubeVideo} src={youtubeEmbed} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <div></div>
+            </section>
+        </>
     )
 }
 
@@ -64,6 +75,7 @@ export const getServerSideProps = async pageContext => {
                 bio: trainer.bio || null,
                 name: trainer.name || null,
                 image: trainer.image || null,
+                youtube: trainer.youtube || null
             }
         }
     }

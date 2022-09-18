@@ -30,3 +30,14 @@
     padding-left: 2rem;
     width: 80%
 }
+
+.videoContainer {
+    margin: 5rem 0rem;
+    display: grid;
+    grid-template-columns: 20vw 60vw 20vw;
+}
+
+.youtubeVideo {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+  }
