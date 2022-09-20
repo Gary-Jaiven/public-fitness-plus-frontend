@@ -14,10 +14,11 @@
 }
 
 .trainerImage {
-    width: 20vw;
-    height: 20vw;
+    width: 15vw;
+    height: 15vw;
     border-radius: 100%;
     background-color: white;
+    border: 0px black solid;
 }
 
 .bioContainer {

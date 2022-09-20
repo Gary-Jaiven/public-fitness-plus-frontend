@@ -1,4 +1,5 @@
 import styles from '../styles/TeamCard.module.css'
+import Link from 'next/link'
 
 export default function CardGroup(){
     return(
@@ -90,7 +91,9 @@ function Card(props){
             <div className={styles.card_content_container}>
                 <div className={styles.card_trainer_name}>{props.memberName}</div>
                 <div className={styles.jobTitle}>{props.jobTitle}</div>
-                <button className={styles.cardButton}>Learn more about {props.firstName}</button>
+                <Link href="/">
+                    <button className={styles.cardButton}>Learn more about {props.firstName}</button>
+                </Link>
             </div>
         </div>
     )
