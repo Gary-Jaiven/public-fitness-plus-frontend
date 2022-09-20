@@ -78,7 +78,7 @@ export default function Home() {
             </div>
         </section>
         {/* OUR TEAM */}
-        <OurTeam />
+        {/* <OurTeam /> */}
         <section className="section_container_one_column" style={{backgroundColor: '#F7FAE6', paddingTop: '2rem', paddingBottom: '2rem'}}>
           <h1>FormSubmit Demo</h1>
           <form>

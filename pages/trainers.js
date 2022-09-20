@@ -1,7 +1,8 @@
 import Layout from '../components/Layout'
 import CardGroup from '../components/Card'
 
-export default function Team() {
+export const Team = ({results}) => {
+  console.log(results)
   return (
     <div>
         {/* <section style={{height: '90vh'}}>
@@ -19,7 +20,7 @@ export default function Team() {
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem </p>
           </div>
         </section>
-        <CardGroup />
+        <CardGroup results={results}/>
         <div className='section_container_one_column' style={{margin: '4rem 0rem'}}>
           <section className='section_content_one_column'>
             <div className='sub_title_black' style={{textAlign: 'center', marginBottom: '1rem'}}>Lorem ipsum dolor sit amet</div>
@@ -30,6 +31,26 @@ export default function Team() {
   )
 }
 
+export const getServerSideProps = async pageContext => {
+
+  const query = encodeURIComponent(`*[ _type == "trainer"]`);
+  const url = `https://3tqn9fwp.api.sanity.io/v2021-10-21/data/query/production?query=${query}`;
+
+  const result = await fetch(url).then(res => res.json());
+
+  if (!result) {
+      return {
+          notFound: true
+      }
+  } else {
+      return {
+          props: {
+              results: result
+          }
+      }
+  }
+};
+
 Team.getLayout = function getLayout(page){
   return (
     <Layout>
@@ -37,3 +58,5 @@ Team.getLayout = function getLayout(page){
     </Layout>
   )
 }
+
+export default Team;
