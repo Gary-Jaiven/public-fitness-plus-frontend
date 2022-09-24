@@ -13,6 +13,7 @@ export default function CardGroup({results}){
             memberName={trainer.firstName + ' ' + trainer.lastName}
             jobTitle={trainer.jobTitle}
             firstName={trainer.firstName}
+            slug={trainer.slug}
         />
     })
 
@@ -37,6 +38,8 @@ const Card = (props) => {
         }
     },[props.img]);
 
+    console.log(props.slug.current)
+    const trainerLink = props.slug.current
     return(
         <div className={styles.teamCard}>
             <div className={styles.card_image_container}>
@@ -45,8 +48,11 @@ const Card = (props) => {
             <div className={styles.card_content_container}>
                 <div className={styles.card_trainer_name}>{props.memberName}</div>
                 <div className={styles.jobTitle}>{props.jobTitle}</div>
-                <Link href='/'>
-                    <button className={styles.cardButton}>Learn more about {props.firstName}</button>
+                <Link href={{
+                    pathname: '/trainer/[slug]',
+                    query: {slug: `${props.slug.current}`}
+                }}>
+                    <a><button className={styles.cardButton}>Learn more about {props.firstName}</button></a>
                 </Link>
             </div>
         </div>
