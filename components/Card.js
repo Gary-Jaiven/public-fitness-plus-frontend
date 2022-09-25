@@ -4,7 +4,6 @@ import styles from '../styles/TeamCard.module.css'
 import Link from 'next/link'
 
 export default function CardGroup({results}){
-    console.log(results)
 
     const cards = results.result.map((trainer, index) => {
         return <Card
@@ -38,8 +37,6 @@ const Card = (props) => {
         }
     },[props.img]);
 
-    console.log(props.slug.current)
-    const trainerLink = props.slug.current
     return(
         <div className={styles.teamCard}>
             <div className={styles.card_image_container}>

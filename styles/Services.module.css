@@ -1,48 +1,41 @@
-.services_container {
-    min-height: 100vh;
-    padding: 4rem 0;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: aqua;
+.service_grid {
+  margin: auto;
+  padding: 2rem;
+  max-width: 90vw;
 }
 
-.servicesWrapper{
-    max-width: 800px;
-    padding-top: 10em;
+.service_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2rem;
+  column-gap: 2rem;
+}
+
+@media screen and (min-width: 767px) {
+    .service_grid {
+      grid-template-columns: repeat(2, 1fr);
   }
-  .servicesStrongOver50 {
-    width: 100%;
-    height: 40vh;
-    text-align: center;
-    font-family: Open Sans;
+}
+
+@media screen and (min-width: 1200px) {
+  .service_grid {
+    grid-template-columns: repeat(3, 1fr);
   }
-  .servicesStrongOver50Content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3.15rem;
-    /* padding: 3em; */
-    font-family: Open Sans;
-    color: white;
-  }
-  .servicesBigCard{
-    overflow:hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
-    transition: transform 200ms ease-in;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  .servicesBigCardBody{
-    text-align: center;
-    padding: 0.5rem 2rem;
-  }
-  .servicesCardTitle{
-    padding: 1 rem;
-    text-align: center;
-  }
+}
+
+.service_card {
+  background-color: white;
+  line-height: 1.4;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.service_card img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  width: 100%;
+}
+
+.service_content {
+  padding: 1rem 1.6rem 1.6rem;
+}

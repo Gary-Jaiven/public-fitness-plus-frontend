@@ -1,8 +1,52 @@
+import { useState, useEffect } from 'react'
+import imageUrlBuilder from '@sanity/image-url'
 import Layout from '../components/Layout'
 import styles from '../styles/Services.module.css'
-import Image from 'next/image'
+import SanityBlockContent from "@sanity/block-content-to-react"
 
-export default function Services() {
+
+const ServiceCard = (props) => {
+  console.log(props)
+  const [imageUrl, setImageUrl] = useState('') 
+
+  useEffect(() => {
+      const builder = imageUrlBuilder({
+          projectId: '3tqn9fwp',
+          dataset: 'production'
+      });
+
+      if(props.img !== null){
+          setImageUrl(builder.image(props.img));
+      }
+  },[props.img]);
+
+  return(
+    <div className={styles.service_card}>
+      {imageUrl && <img src={imageUrl} alt='Sheila' />}   
+      <div className={styles.service_content}>
+        <h3>{props.title}</h3>
+        <p><SanityBlockContent blocks={props.desc}/></p>
+        <button className="button" style={{margin: '1rem auto'}}>Learn more.</button>
+      </div>
+    </div>
+  )
+}
+
+export const Services = ({results}) => {
+  console.log(results)
+
+  const serviceCards = results.result.map((service, index) => {
+    return <>
+      <ServiceCard 
+        key="index" 
+        img={service.image}
+        title={service.title}
+        desc={service.description}
+        slug={service.slug}
+      />
+    </>
+  })
+
   return (
     <div>
       <section style={{height: '90vh'}}>
@@ -20,39 +64,8 @@ export default function Services() {
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem </p>
           </div>
         </section>
-      <section className='section_container_two_column'>
-        <div className='section_content_two_column'>
-          <div className={styles.servicesBigCard}>
-            <Image src={"/aboutImage2.png"} alt="Sheila Kalas stands in front of the Fitness Plus Personal Training Studio" layout='responsive' width='2685' height='1984'/>
-            <h3 className={styles.servicesCardTitle}>Strong Over 50</h3>
-            <p className={styles.servicesBigCardBody}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
-            <button className="button" style={{margin: '1rem auto'}}>Learn more.</button>
-          </div>
-          <div className={styles.servicesBigCard}>
-            <Image src={"/aboutImage2.png"} alt="Sheila Kalas stands in front of the Fitness Plus Personal Training Studio" layout='responsive' width='2685' height='1984'/>
-            <h3 className={styles.servicesCardTitle}>Personal Training</h3>
-            <p className={styles.servicesBigCardBody}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
-            <button className="button" style={{margin: '1rem auto'}}>Learn more.</button>
-          </div>
-          <div className={styles.servicesBigCard}>
-            <Image src={"/aboutImage2.png"} alt="Sheila Kalas stands in front of the Fitness Plus Personal Training Studio" layout='responsive' width='2685' height='1984'/>
-            <h3 className={styles.servicesCardTitle}>Therapeutic Massage</h3>
-            <p className={styles.servicesBigCardBody}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
-            <button className="button" style={{margin: '1rem auto'}}>Learn more.</button>
-          </div>
-          <div className={styles.servicesBigCard}>
-            <Image src={"/aboutImage2.png"} alt="Sheila Kalas stands in front of the Fitness Plus Personal Training Studio" layout='responsive' width='2685' height='1984'/>
-            <h3 className={styles.servicesCardTitle}>Injury Rehab Services</h3>
-            <p className={styles.servicesBigCardBody}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
-            <button className="button" style={{margin: '1rem auto'}}>Learn more.</button>
-          </div>
-          <div className={styles.servicesBigCard}>
-            <Image src={"/aboutImage2.png"} alt="Sheila Kalas stands in front of the Fitness Plus Personal Training Studio" layout='responsive' width='2685' height='1984'/>
-            <h3 className={styles.servicesCardTitle}>For Fitness Professionals</h3>
-            <p className={styles.servicesBigCardBody}>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
-            <button className="button" style={{margin: '1rem auto'}}>Learn more.</button>
-          </div>
-        </div>
+      <section className={styles.service_grid}>
+       {serviceCards}   
       </section>
       <div className='section_container_one_column' style={{margin: '4rem 0rem'}}>
         <section className='section_content_one_column'>
@@ -64,6 +77,26 @@ export default function Services() {
   )
 }
 
+export const getServerSideProps = async pageContext => {
+
+  const query = encodeURIComponent(`*[ _type == "service"]`);
+  const url = `https://3tqn9fwp.api.sanity.io/v2021-10-21/data/query/production?query=${query}`;
+
+  const result = await fetch(url).then(res => res.json());
+
+  if (!result) {
+      return {
+          notFound: true
+      }
+  } else {
+      return {
+          props: {
+              results: result
+          }
+      }
+  }
+};
+
     
 Services.getLayout = function getLayout(page){
   return (
@@ -72,3 +105,5 @@ Services.getLayout = function getLayout(page){
     </Layout>
   )
 }
+
+export default Services;
