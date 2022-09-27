@@ -33,10 +33,10 @@ export default function Home() {
           </div>
         </section>
         {/* STRONG OVER 50 */}
-        <section 
+        {/* <section 
           className="section_container_one_column" 
           style={{backgroundImage: "url(/Rob_RoseMarie.png)", backgroundSize: 'cover', }}
-        >
+        > */}
           <div className="overlay_container">
             <div className="section_content_one_column">
               <div className={styles.strongOver50}>
@@ -52,7 +52,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        {/* </section> */}
         {/* SERVICES */}
         <section className="section_container_two_column">
           <div className="section_content_two_column">

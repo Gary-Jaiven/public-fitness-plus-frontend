@@ -28,7 +28,7 @@
 
 .overlay_container {
     background-color: rgba(117,112,21,.9);
-    width: 100vw;
+    width: 100%;
     display: grid;
     justify-content: center;
 }
