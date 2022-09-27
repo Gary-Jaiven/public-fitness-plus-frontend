@@ -80,22 +80,34 @@ export default function Home() {
         {/* OUR TEAM */}
         {/* <OurTeam /> */}
         <section className="section_container_one_column" style={{backgroundColor: '#F7FAE6', paddingTop: '2rem', paddingBottom: '2rem'}}>
-          <h1>FormSubmit Demo</h1>
-          <form>
-            <div className="form-group">
-              <div className="form-row">
-                <div className="col">
-                  <input type="text" name="name" className="form-control" placeholder="Full Name" required />
-                </div>
-                <div className="col">
-                  <input type="email" name="email" className="form-control" placeholder="Email Address" required />
-                </div>
+          <h1 style={{marginBottom: '0px'}}>Do Not Wait!</h1>
+          <p style={{marginTop: '0px'}}>Send us a message to get started.</p>
+          <form className={styles.form_container}>
+            <div className={styles.form_name}>
+              <div className={styles.form_col_name}>
+                <label htmlFor="firstName">First Name*</label>
+                <input type="text" name="firstName" placeholder="First Name" required />
+              </div>
+              <div className={styles.form_col_name}>    
+                <label htmlFor="lastName">Last Name*</label>
+                <input type="text" name="lastName" placeholder="Full Name" required />    
               </div>
             </div>
-            <div className="form-group">
-              <textarea placeholder="Your Message" className="form-control" name="message" rows="10" required></textarea>
+            <div className={styles.form_inputs}>
+              <label htmlFor='email'>Email*</label>
+              <input type="email" name="email" placeholder="Email Address" required style={{width: '100%'}}/>    
             </div>
-            <button type="submit" className="btn btn-lg btn-dark btn-block">Submit Form</button>
+            <div className={styles.form_inputs}>
+              <label htmlFor='phone'>Phone Number</label>
+              <input type="phone" name="phone" placeholder="Phone Number" required style={{width: '100%'}}/>    
+            </div>
+            <div className={styles.form_inputs}>
+              <label htmlFor='message'>I am interested in these services</label>
+              <textarea placeholder="Your Message" name="message" rows="10" required style={{width: '100%'}}></textarea>
+            </div>
+            <div>
+              <button type="submit" >Submit Form</button>
+            </div>
           </form>
         </section>
      </>

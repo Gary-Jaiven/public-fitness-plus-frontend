@@ -248,3 +248,41 @@
   margin-left: 0.5rem;
 }
 
+.form_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 40vw;
+  gap: 1.5rem;
+}
+
+.form_container label {
+  font-size: 0.8rem;
+  margin: 0.5rem;
+}
+
+.form_container input {
+  padding: 0.66rem;
+  border: 1px gray solid;
+}
+
+.form_container textarea {
+  /* background-color: blue; */
+  padding: 0.66rem;
+  border: 1px gray solid;
+}
+
+.form_name {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.form_inputs {
+  display: grid; 
+  grid-template-columns: 1fr;
+}
+
+.form_col_name {
+  display: grid;
+  grid-template-columns: 1fr;
+}
