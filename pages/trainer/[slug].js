@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout'
 import SanityBlockContent from "@sanity/block-content-to-react"
 import imageUrlBuilder from '@sanity/image-url'
 import Image from 'next/image'
