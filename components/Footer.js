@@ -4,9 +4,8 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
-      <div className={styles.footer_container}>
-        <Link href = "/" className="siteLogo"><a><Image src={"/fitnessPlusCircleLogo-web.png"} alt="Fitness Plus Logo" width={75} height={75}/></a></Link>
+    <footer>
+      <div>
         <ul>
           <li>859.269.9280</li>
           <li>info@fitplusinc.com</li>

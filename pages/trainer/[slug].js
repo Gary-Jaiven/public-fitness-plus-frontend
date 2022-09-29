@@ -25,11 +25,11 @@ export const Trainer = ({firstName, lastName, bio, image, youtube}) => {
     return (
         <>
             <section style={{height: '90vh'}} className={styles.profileContainer}>
-                <div style={{backgroundImage: "url(/Client_Malinda_ChrisWilliams.jpg)", backgroundSize: '100% 100%'}}>
+                {/* <div style={{backgroundImage: "url(/Client_Malinda_ChrisWilliams.jpg)", backgroundSize: '100% 100%'}}> */}
                     <div className={styles.imgContainer}>
                         {imageUrl && <img src={imageUrl} className={styles.trainerImage} alt='Sheila' />}
                     </div>
-                </div>
+                {/* </div> */}
                 <div className={styles.bioContainer}>
                     <div className={styles.bioContent}>
                         <SanityBlockContent blocks={bio}/>
