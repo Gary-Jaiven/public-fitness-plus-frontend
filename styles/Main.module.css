@@ -49,22 +49,55 @@
     height: 6vh;
     color: white;
     place-content: center center;
-    font-weight: 800;
+    font-weight: 500;
+    font-style: italic;
 }
 
 .container {
-    background-color: white;
+    margin: 2rem 0rem;
 }
 
 .container__content {
-    margin: 2rem 0;
+    color: #454D39;
     padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
 }
 
 .container__content h1 {
     margin: 1rem 0;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
 }
 
 .container__content h3 {
     margin: 1rem 0;
 }
+
+.container__content__one_column {
+    display: grid;
+    color: white;
+    grid-template-columns: 1fr;
+    background-color: ;
+    gap: 0.8rem;
+    padding: 2rem;
+    background-color: #757013;
+}
+
+.container__button {
+    background-color: #757013; /* Green */
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    color: #F7FAE6;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0.8rem 0px;
+    font-family: Open Sans;
+}
+

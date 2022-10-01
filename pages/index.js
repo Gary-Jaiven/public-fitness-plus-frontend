@@ -17,7 +17,7 @@ export default function Home() {
           <div className={styles.container__content}>
             <div>
               <Image 
-                src="/homeImage1.png" 
+                src="/home_first_image.png" 
                 alt="Fitness Plus" 
                 width="526" 
                 height="518"
@@ -27,25 +27,33 @@ export default function Home() {
             <div>
                 <h3>Personal Training Made for You</h3>
                 <div>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</div>
-                <button>Schedule Your Free Consultation</button>
+                <button className={styles.container__button}>Schedule Your Free Consultation</button>
             </div>
           </div>
         </section>
         <section className={styles.container}>
-          <div className={styles.container__content}>
+          <div className={styles.container__content__one_column}>
             <h1>Strong Over 50</h1>
             <div>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</div>
-            <button>Schedule Your Free Consultation</button>
+            <button className={styles.container__button} style={{backgroundColor: 'white', color: '#757013'}}>Schedule Your Free Consultation</button>
           </div>
         </section>
         <section className={styles.container}>
           <div className={styles.container__content}>
             <div>
-                <h3>Personal Training Made for You</h3>
+                <h3>Committed to Improving Your Health</h3>
                 <div>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</div>
-                <button>Schedule Your Free Consultation</button>
+                <button className={styles.container__button}>Schedule Your Free Consultation</button>
             </div>
-            <div>Image</div>
+            <div>
+            <Image 
+                src="/home_second_image.png" 
+                alt="Fitness Plus" 
+                width="674" 
+                height="556"
+                layout="responsive"
+              />
+            </div>
           </div>
         </section>
         <section className={styles.container}>
