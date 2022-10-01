@@ -35,7 +35,7 @@ export default function Home() {
           <div className={styles.container__content__one_column}>
             <h1>Strong Over 50</h1>
             <div>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</div>
-            <button className={styles.container__button} style={{backgroundColor: 'white', color: '#757013'}}>Schedule Your Free Consultation</button>
+            {/* <button className={styles.container__button} style={{backgroundColor: 'white', color: '#757013'}}>Schedule Your Free Consultation</button> */}
           </div>
         </section>
         <section className={styles.container}>
@@ -61,10 +61,36 @@ export default function Home() {
             <h1>Meet Our Team</h1>
           </div>
         </section>
-        <section className={styles.container}>
-          <div className={styles.container__content}>
-            <h1>Contact Form</h1>
-          </div>
+        <section className={styles.contact__container}>
+            <div style={{padding: '1rem 0rem'}}>
+              <h1>Do Not Wait!</h1>
+              <p>Send us a message to get started.</p>
+            </div>
+            <form className={styles.form_container}>
+              <div className={styles.form_inputs}>
+                  <label htmlFor="firstName">First Name*</label>
+                  <input type="text" name="firstName" placeholder="First Name" required />
+              </div>
+              <div className={styles.form_inputs}>
+                  <label htmlFor="lastName">Last Name*</label>
+                  <input type="text" name="lastName" placeholder="Full Name" required />    
+              </div>
+              <div className={styles.form_inputs}>
+                <label htmlFor='email'>Email*</label>
+                <input type="email" name="email" placeholder="Email Address" required style={{width: '100%'}}/>    
+              </div>
+              <div className={styles.form_inputs}>
+                <label htmlFor='phone'>Phone Number</label>
+                <input type="phone" name="phone" placeholder="Phone Number" required style={{width: '100%'}}/>    
+              </div>
+              <div className={styles.form_inputs}>
+                <label htmlFor='message'>I am interested in these services</label>
+                <textarea placeholder="Your Message" name="message" rows="10" required style={{width: '100%'}}></textarea>
+              </div>
+              <div>
+                <button className={styles.container__button} type="submit">Submit Form</button>
+              </div>
+            </form>
         </section>
     </>
   )

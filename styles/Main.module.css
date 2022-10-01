@@ -82,7 +82,7 @@
     grid-template-columns: 1fr;
     background-color: ;
     gap: 0.8rem;
-    padding: 2rem;
+    padding: 5rem 2rem;
     background-color: #757013;
 }
 
@@ -101,3 +101,49 @@
     font-family: Open Sans;
 }
 
+.contact__container {
+  background-color: #F7FAE6;
+  padding-bottom: 2rem;
+}
+
+.contact__container h1 {
+  text-align: center;
+}
+
+
+.contact__container p {
+  text-align: center;
+  margin: 0px;
+}
+
+.form_container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form_container p {
+  margin: 0px;
+}
+
+.form_container label {
+  font-size: 0.8rem;
+  /* margin: 0.5rem; */
+}
+
+.form_container input {
+  padding: 0.66rem;
+  border: 1px gray solid;
+  width: 100%;
+}
+
+.form_container textarea {
+  padding: 0.66rem;
+  border: 1px gray solid;
+}
+
+.form_inputs {
+  margin: 1rem 0rem;
+  width: 100%;
+  display: grid; 
+  grid-template-columns: 1fr;
+}
