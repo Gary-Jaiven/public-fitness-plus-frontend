@@ -7,9 +7,21 @@ export default function Home() {
     <>
         <section className={styles.hero}>
             <div className={styles.hero__content}>
-                <h1 className={styles.hero__title}>Personal Training at its Finest</h1>
-                <h3 className={styles.hero__subtitle}>No Memberships. No Contracts. No Hassle.</h3>
-                <button className={styles.hero__button}>Schedule Your Free Consultation</button>
+                <div className={styles.hero__content__left}>
+                  <h1 className={styles.hero__title}>Personal Training at its Finest</h1>
+                  <h3 className={styles.hero__subtitle}>No Memberships. No Contracts. No Hassle.</h3>
+                  <button className={styles.hero__button}>Schedule Your Free Consultation</button>
+                </div>
+                <div className={styles.hero__content__image}>
+                  <Image 
+                    className={styles.hero__image}
+                    src="/home_hero_image.png" 
+                    alt="Fitness Plus" 
+                    width="937" 
+                    height="910"
+                    layout="responsive"
+                  />
+                </div>
             </div>
         </section>
         <div className={styles.contactBar}>859.269.9280</div>

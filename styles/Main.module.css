@@ -9,19 +9,24 @@
 .hero__content {
     display: grid;
     grid-template-columns: 1fr;
-    width: 80vw;
-    height: 10vh;
+    width: 100%;
+}
+
+.hero__content__left {
+  padding: 0 2rem;
+  margin: 0 auto;
 }
 
 .hero__title {
+    margin-top: 4rem;
     color: #454D39;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 100;
     font-style: italic;
 }
 
 .hero__subtitle {
-    margin: 2rem 0rem;
+    margin: 1rem 0rem;
     color: #454D39;
     font-weight: lighter;
     font-style: italic;
@@ -44,9 +49,9 @@
 .contactBar {
     display: grid;
     position: relative;
-    bottom: 6vh;
+    bottom: 6.5vh;
     background-color: #757013;
-    height: 6vh;
+    height: 7.5vh;
     color: white;
     place-content: center center;
     font-weight: 500;
@@ -146,4 +151,50 @@
   width: 100%;
   display: grid; 
   grid-template-columns: 1fr;
+}
+
+/* tablet ipad 768 x 1024 */
+@media screen and (min-width: 768px){
+  .hero {
+    height: 100%;
+  }
+
+  .hero__content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero__button {
+    width: 100%;
+  }
+}
+
+/*  tablet ipad 1024 x  */
+@media screen and (min-width: 1024px){
+  .hero {
+    height: 90vh;    
+  }
+
+  .hero__content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero__content__left {
+    margin-top: 100px;
+  }
+
+  .hero__button {
+    width: 100%;
+  }
+
+  .hero__content__image {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: end;
+  }
+
+}
+
+/* desktop 1366 x 768 */
+@media screen and (min-width: 1366px) {
+  
 }
