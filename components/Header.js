@@ -3,7 +3,7 @@ import styles from '../styles/Header.module.css'
 import { useRouter } from 'next/router'
 
 
-export default function Navigation() {
+export default function Navigation({setShowMobileNav}) {
   const router = useRouter()
 
   return (
@@ -14,7 +14,7 @@ export default function Navigation() {
     style={{    
       backgroundColor: router.pathname === '/' ? '#F7FAE6' : '#757013'
     }}>
-      <Navbar />
+      <Navbar setShowMobileNav={setShowMobileNav} />
     </div>
   )
 }

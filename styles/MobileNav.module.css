@@ -1,0 +1,23 @@
+.mobile__nav__container {
+    height: 100vh;
+    background-color: #F7FAE6;
+}
+
+.mobile__nav__content {
+    height: 100vh;
+    width: 80%;
+    background-color: #757013;
+    border-top-right-radius: 50px;
+    color: white;
+}
+
+.mobile__nav__container ul {
+    margin: 0px;
+    padding: 3rem;
+    list-style-type: none;
+}
+
+.mobile__nav__container li {
+    margin: 1.3rem;
+    border-bottom: 1px solid white;
+}
