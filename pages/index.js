@@ -1,8 +1,9 @@
 import styles from '../styles/Main.module.css'
 import Layout from '../components/Layout'
 import Image from 'next/image'
+import CardGroup from '../components/Card'
 
-export default function Home() {
+export const Home = ({results}) => {
   return (
     <>
         <section className={styles.hero}>
@@ -68,9 +69,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className={styles.container}>
-          <div className={styles.container__content}>
+        <section className={styles.container} style={{marginBottom: '0px'}}>
+          <div className={styles.container__content__one_column}>
             <h1>Meet Our Team</h1>
+            <CardGroup results={results}/>
           </div>
         </section>
         <section className={styles.contact__container}>
@@ -108,6 +110,26 @@ export default function Home() {
   )
 }
 
+export const getServerSideProps = async pageContext => {
+
+  const query = encodeURIComponent(`*[ _type == "trainer"]`);
+  const url = `https://3tqn9fwp.api.sanity.io/v2021-10-21/data/query/production?query=${query}`;
+
+  const result = await fetch(url).then(res => res.json());
+
+  if (!result) {
+      return {
+          notFound: true
+      }
+  } else {
+      return {
+          props: {
+              results: result
+          }
+      }
+  }
+};
+
 Home.getLayout = function getLayout(page){
   return (
     <Layout>
@@ -115,3 +137,5 @@ Home.getLayout = function getLayout(page){
     </Layout>
   )
 }
+
+export default Home;

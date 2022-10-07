@@ -1,46 +1,37 @@
-.teamCardWrapper{
+.team__container {
     display: grid;
-    width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 35rem));
+    grid-template-columns: 1fr;
     gap: 1rem;
-    justify-content: center;
-    background-color: white;
-    padding: 3em;
 }
-  
-.teamCard{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    overflow:hidden;
-    box-shadow: 0, 2px, 20px;
-    transition: transform 200ms ease-in;
+
+.trainer__container {
     background-color: #F7FAE6;
+    min-height: 100px;
+    max-height: 105px;
+    color: #757013;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 0.5rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.card_image_container {
-    display: grid;
-    align-content: end;
+.trainer__content {
+    font-size: 0.8rem;
 }
 
-.card_content_container {
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-    width: 80%;
+.trainer__content__name {
+    font-weight: 600;
 }
-  
+
+.trainer__content__button {
+    margin-top: 0.8rem;
+    font-size: 1rem;
+}
+
 .cardImage{
-    max-height: 10rem;
+    max-width: 7rem;
     width: auto;
-}
-
-.card_trainer_name {
-    font-size: 1.17em;
-    font-weight: bold;
-}
-
-.jobTitle {
-    margin-bottom: 1em;
 }
 
 .cardButton{
@@ -51,9 +42,29 @@
     padding: 5px 10px;
     text-align: center;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 0.8rem;
     font-family: Open Sans;
     cursor: pointer;
+  }
+
+
+/*  tablet ipad 1024 x  */
+@media screen and (min-width: 1024px){
+    .team__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+  }
+  
+  /* desktop 1366 x 768 */
+  @media screen and (min-width: 1366px) {
+    .team__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+    
   }
   
   

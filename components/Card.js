@@ -17,7 +17,7 @@ export default function CardGroup({results}){
     })
 
     return(
-        <div className={styles.teamCardWrapper}>
+        <div className={styles.team__container}>
             {cards}
         </div>
     )
@@ -38,19 +38,21 @@ const Card = (props) => {
     },[props.img]);
 
     return(
-        <div className={styles.teamCard}>
-            <div className={styles.card_image_container}>
+        <div className={styles.trainer__container}>
+            <div>
                 {imageUrl && <img src={imageUrl} className={styles.cardImage} alt='Sheila' />}   
             </div>
-            <div className={styles.card_content_container}>
-                <div className={styles.card_trainer_name}>{props.memberName}</div>
-                <div className={styles.jobTitle}>{props.jobTitle}</div>
-                <Link href={{
-                    pathname: '/trainer/[slug]',
-                    query: {slug: `${props.slug.current}`}
-                }}>
-                    <a><button className={styles.cardButton}>Learn more about {props.firstName}</button></a>
-                </Link>
+            <div className={styles.trainer__content}>
+                <div className={styles.trainer__content__name}>{props.memberName}</div>
+                <div>{props.jobTitle}</div>
+                <div className={styles.trainer__content__button}>
+                    <Link href={{
+                        pathname: '/trainer/[slug]',
+                        query: {slug: `${props.slug.current}`}
+                    }}>
+                        <a><button className={styles.cardButton}>Learn more about {props.firstName}</button></a>
+                    </Link>
+                </div>
             </div>
         </div>
     )

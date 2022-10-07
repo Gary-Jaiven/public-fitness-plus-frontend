@@ -85,7 +85,6 @@
     display: grid;
     color: white;
     grid-template-columns: 1fr;
-    background-color: ;
     gap: 0.8rem;
     padding: 5rem 2rem;
     background-color: #757013;
@@ -192,6 +191,17 @@
     align-items: end;
   }
 
+  .container__content {
+    color: #454D39;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .container__content__one_column {
+    padding: 5rem 10vw;
+  }
 }
 
 /* desktop 1366 x 768 */
