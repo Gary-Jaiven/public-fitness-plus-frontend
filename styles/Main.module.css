@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
-    height: 90vh;    
+    /* height: 90vh;     */
     background-color: #F7FAE6;
 }
 
@@ -169,9 +169,6 @@
 
 /*  tablet ipad 1024 x  */
 @media screen and (min-width: 1024px){
-  .hero {
-    height: 90vh;    
-  }
 
   .hero__content {
     grid-template-columns: 1fr 1fr;
