@@ -7,6 +7,8 @@ import { useRouter } from 'next/router'
 export default function Navbar({setShowMobileNav}){
     const router = useRouter() 
 
+    const strokeColor = router.pathname === '/' ? '#757013' : '#F7FAE6'
+
     return <nav 
         className={styles.nav}  
         style={{    
@@ -23,11 +25,13 @@ export default function Navbar({setShowMobileNav}){
             <Link href="/contact"><a>Contact</a></Link>
         </div>
         <div className={styles.mobile_link_container} onClick={() => setShowMobileNav(true)}>
-            <svg viewBox="0 0 24 24" width="25px" height="25px" preserveAspectRatio="xMidYMid meet" focusable="false">
-                <g className="style-scope yt-icon">
-                    <path d="M21,6H3V5h18V6z M21,11H3v1h18V11z M21,17H3v1h18V17z" className="style-scope yt-icon"></path>
-                </g>
+            <svg width="20" height="20" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 3.47239L24.9984 3.06824" stroke={strokeColor} strokeWidth="2"/>
+                <path d="M1 27.0682L24.9984 26.6641" stroke={strokeColor} strokeWidth="2"/>
+                <path d="M1 14.8156H25" stroke={strokeColor} strokeWidth="2"/>
             </svg>
         </div>
     </nav>
 }
+
+
