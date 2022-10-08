@@ -7,7 +7,7 @@ export default function CardGroup({results}){
 
     const cards = results.result.map((trainer, index) => {
         return <Card
-            key="index" 
+            key={index} 
             img={trainer.image}
             memberName={trainer.firstName + ' ' + trainer.lastName}
             jobTitle={trainer.jobTitle}

@@ -14,7 +14,7 @@ export default function Navbar({setShowMobileNav}){
             color: router.pathname === '/' ? '#454D39' : 'white'
         }}
     >
-        <Link href = "/" ><a><Image src={"/fitnessPlusCircleLogo-web.png"} alt="Fitness Plus Logo" width={75} height={75}/></a></Link>
+        <Link href = "/" ><a><Image src={"/fitnessPlusCircleLogo-web.png"} alt="Fitness Plus Logo" width={55} height={55}/></a></Link>
         <div className={styles.link_container}>
             <Link href="/"><a>Home</a></Link>
             <Link href="/about"><a>About Us</a></Link>
