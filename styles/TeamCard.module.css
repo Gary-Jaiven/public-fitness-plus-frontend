@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
+    /* border: 2px blue solid; */
 }
 
 .trainer__container {

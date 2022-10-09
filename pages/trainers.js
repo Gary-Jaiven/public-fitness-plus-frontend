@@ -1,9 +1,8 @@
 import Layout from '../components/Layout'
-import CardGroup from '../components/Card'
+import TrainerCards from '../components/TrainerCards'
 import styles from '../styles/Trainers.module.css'
 
 export const Team = ({results}) => {
-  console.log(results)
   return (
     <div>
         {/* <section style={{height: '90vh'}}>
@@ -20,7 +19,7 @@ export const Team = ({results}) => {
           <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem </p>
         </section>
         <section className={styles.container__content}>
-          <CardGroup results={results}/>  
+          <TrainerCards results={results}/>  
         </section>
         <section className={styles.container__content__one_column} style={{backgroundColor: 'white', color: '#757013'}}>
           <h2>Lorem ipsum dolor sit amet</h2>

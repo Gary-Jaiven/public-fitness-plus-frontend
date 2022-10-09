@@ -1,7 +1,7 @@
 import styles from '../styles/Main.module.css'
 import Layout from '../components/Layout'
 import Image from 'next/image'
-import CardGroup from '../components/Card'
+import TrainerCards from '../components/TrainerCards'
 
 export const Home = ({results}) => {
   return (
@@ -72,7 +72,7 @@ export const Home = ({results}) => {
         <section className={styles.container} style={{marginBottom: '0px'}}>
           <div className={styles.container__content__one_column}>
             <h1>Meet Our Team</h1>
-            <CardGroup results={results}/>
+            <TrainerCards results={results}/>
           </div>
         </section>
         <section className={styles.contact__container}>

@@ -5,7 +5,7 @@ import Footer from './Footer'
 import MobileNav from './MobileNav'
 
 export default function Layout({ children }) {
-  const [showMobileNav, setShowMobileNav] = useState(true) 
+  const [showMobileNav, setShowMobileNav] = useState(false) 
 
   if(showMobileNav){
     return (

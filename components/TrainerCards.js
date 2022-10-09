@@ -3,27 +3,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import styles from '../styles/TeamCard.module.css'
 import Link from 'next/link'
 
-export default function CardGroup({results}){
-
-    const cards = results.result.map((trainer, index) => {
-        return <Card
-            key={index} 
-            img={trainer.image}
-            memberName={trainer.firstName + ' ' + trainer.lastName}
-            jobTitle={trainer.jobTitle}
-            firstName={trainer.firstName}
-            slug={trainer.slug}
-        />
-    })
-
-    return(
-        <div className={styles.team__container}>
-            {cards}
-        </div>
-    )
-}
-
-const Card = (props) => {
+const TrainerCard = (props) => {
     const [imageUrl, setImageUrl] = useState('') 
 
     useEffect(() => {
@@ -54,6 +34,26 @@ const Card = (props) => {
                     </Link>
                 </div>
             </div>
+        </div>
+    )
+}
+
+export default function TrainerCards({results}){
+
+    const cards = results.result.map((trainer, index) => {
+        return <TrainerCard
+            key={index} 
+            img={trainer.image}
+            memberName={trainer.firstName + ' ' + trainer.lastName}
+            jobTitle={trainer.jobTitle}
+            firstName={trainer.firstName}
+            slug={trainer.slug}
+        />
+    })
+
+    return(
+        <div className={styles.team__container}>
+            {cards}
         </div>
     )
 }
