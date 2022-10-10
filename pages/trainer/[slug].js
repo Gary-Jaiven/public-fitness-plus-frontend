@@ -7,7 +7,6 @@ import styles from '../../styles/Bio.module.css'
 
 export const Trainer = ({firstName, lastName, bio, image, youtube}) => {
     const [imageUrl, setImageUrl] = useState('')
-    // console.log(youtube)
     const youtubeEmbed = 'https://www.youtube.com/embed/' + youtube
 
     useEffect(() => {
@@ -22,23 +21,13 @@ export const Trainer = ({firstName, lastName, bio, image, youtube}) => {
     },[image]);
     
 
-    return (
-        <>
-            <section style={{height: '90vh'}} className={styles.profileContainer}>
-                {/* <div style={{backgroundImage: "url(/Client_Malinda_ChrisWilliams.jpg)", backgroundSize: '100% 100%'}}> */}
-                    <div className={styles.imgContainer}>
-                        {imageUrl && <img src={imageUrl} className={styles.trainerImage} alt='Sheila' />}
-                    </div>
-                {/* </div> */}
-                <div className={styles.bioContainer}>
-                    <div className={styles.bioContent}>
-                        <SanityBlockContent blocks={bio}/>
-                    </div>
-                </div>
-            </section>
-            <section style={{textAlign: 'center', marginTop: '5rem'}}>
-                Quote here
-            </section>
+    return (<>
+            <div className={styles.bio__image__container}>
+                {imageUrl && <img src={imageUrl} className={styles.trainerImage} alt='Sheila' />}
+            </div>
+            <div className={styles.bio__content__container}>    
+                <SanityBlockContent blocks={bio}/>
+            </div>
             <section className={styles.videoContainer}>
                 <div></div>
                 <iframe className={styles.youtubeVideo} src={youtubeEmbed} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>

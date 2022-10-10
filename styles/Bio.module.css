@@ -4,21 +4,25 @@
     background-color: #F7FAE6;
 }
 
-.imgContainer {
-   background: rgba(117,112,21,.9);
-   height: 90vh;
-   width: 50vw;
+.bio__image__container {
+   background: #757013;
+   min-height: 200px;
    display: grid;
    justify-content: center;
    align-content: center;
 }
 
+.bio__content__container {
+    padding: 0 2rem;
+}
+
 .trainerImage {
-    width: 15vw;
-    height: 15vw;
+    min-width: 100px;
+    width: 25%;
+    min-height: 100px;
+    height: 25%;
     border-radius: 100%;
     background-color: white;
-    border: 0px black solid;
 }
 
 .bioContainer {

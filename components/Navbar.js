@@ -12,7 +12,6 @@ export default function Navbar({setShowMobileNav}){
     return <nav 
         className={styles.nav}  
         style={{    
-            backgroundColor: router.pathname === '/' ? '#F7FAE6' : '#757013',
             color: router.pathname === '/' ? '#454D39' : 'white'
         }}
     >
