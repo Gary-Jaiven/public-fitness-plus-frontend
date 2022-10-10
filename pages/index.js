@@ -112,7 +112,7 @@ export const Home = ({results}) => {
 
 export const getServerSideProps = async pageContext => {
 
-  const query = encodeURIComponent(`*[ _type == "trainer"]`);
+  const query = encodeURIComponent(`*[ _type == "trainer"]| order(order)`);
   const url = `https://3tqn9fwp.api.sanity.io/v2021-10-21/data/query/production?query=${query}`;
 
   const result = await fetch(url).then(res => res.json());

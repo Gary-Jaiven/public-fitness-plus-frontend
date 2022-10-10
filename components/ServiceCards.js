@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import imageUrlBuilder from '@sanity/image-url'
 import styles from '../styles/ServiceCard.module.css'
 import SanityBlockContent from "@sanity/block-content-to-react"
+import Link from 'next/link'
 
 const ServiceCard = (props) => {
     const [imageUrl, setImageUrl] = useState('') 
@@ -22,8 +23,13 @@ const ServiceCard = (props) => {
         {imageUrl && <img src={imageUrl} className={styles.servicesImage} alt='Sheila' />}   
         <div className={styles.service__card__content}>
           <h3>{props.title}</h3>
-          <div><SanityBlockContent blocks={props.desc}/></div>
-          <button className={styles.service__card__button} style={{margin: '1rem auto'}}>Learn more.</button>
+          <div><SanityBlockContent blocks={props.summary}/></div>
+            <Link href={{
+                pathname: '/service/[slug]',
+                query: {slug: `${props.slug.current}`}
+            }}>
+                <a><button className={styles.service__card__button} style={{margin: '1rem auto'}}>Learn more.</button></a>
+            </Link>
         </div>
       </section>
     )
@@ -36,7 +42,7 @@ const ServiceCard = (props) => {
             key={index}
             img={service.image}
             title={service.title}
-            desc={service.description}
+            summary={service.summary}
             slug={service.slug}
         />
     })
