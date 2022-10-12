@@ -5,7 +5,8 @@ import imageUrlBuilder from '@sanity/image-url'
 import Image from 'next/image'
 import styles from '../../styles/Bio.module.css'
 
-export const Trainer = ({firstName, lastName, bio, image, youtube}) => {
+export const Trainer = ({firstName, lastName, bio, image, youtube, quote}) => {
+    console.log(quote)
     const [imageUrl, setImageUrl] = useState('')
     const youtubeEmbed = 'https://www.youtube.com/embed/' + youtube
 
@@ -27,6 +28,9 @@ export const Trainer = ({firstName, lastName, bio, image, youtube}) => {
             </div>
             <div className={styles.bio__content__container}>    
                 <SanityBlockContent blocks={bio}/>
+            </div>
+            <div className={styles.quote__container }>
+                {quote}
             </div>
             <section className={styles.videoContainer}>
                 <div></div>
@@ -52,6 +56,7 @@ export const getServerSideProps = async pageContext => {
 
     const result = await fetch(url).then(res => res.json());
     const trainer = result.result[0]
+    console.log(trainer)
 
     if (!trainer) {
         return {
@@ -64,7 +69,8 @@ export const getServerSideProps = async pageContext => {
                 lastName: trainer.lastName || null,
                 firstName: trainer.firstName || null,
                 image: trainer.image || null,
-                youtube: trainer.youtube || null
+                youtube: trainer.youtube || null,
+                quote: trainer.quote || null
             }
         }
     }

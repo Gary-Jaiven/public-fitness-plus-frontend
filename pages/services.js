@@ -24,8 +24,8 @@ export const Services = ({results}) => {
       <section className={styles.container__content}>
           <ServiceCards results={results} />
       </section>
-      <section className={styles.container__content__one_column} style={{backgroundColor: 'white', color: '#757013'}}>
-        <div >Lorem ipsum dolor sit amet</div>
+      <section className={styles.container__content__one_column} style={{backgroundColor: 'white', color: '#454d39'}}>
+        <h2>Lorem ipsum dolor sit amet</h2>
         <button className='button' style={{margin: '0 auto'}}>Schedule Your Free Consultation.</button>
       </section>
     </div>

@@ -36,8 +36,17 @@
     width: 80%
 }
 
+.quote__container {
+    text-align: center;
+    color: #757013;
+    font-style: italic;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0rem;
+}
+
 .videoContainer {
-    margin: 5rem 0rem;
+    margin-bottom: 2rem;
     display: grid;
     grid-template-columns: 20vw 60vw 20vw;
 }

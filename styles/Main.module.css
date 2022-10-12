@@ -2,7 +2,6 @@
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
-    /* height: 90vh;     */
     background-color: #F7FAE6;
 }
 
