@@ -23,21 +23,22 @@ export const Trainer = ({firstName, lastName, bio, image, youtube, quote}) => {
     
 
     return (<>
+        <div className={styles.bio__header}>
             <div className={styles.bio__image__container}>
-                {imageUrl && <img src={imageUrl} className={styles.trainerImage} alt='Sheila' />}
+            {imageUrl && <img src={imageUrl} className={styles.trainerImage} alt='Sheila' />}
             </div>
             <div className={styles.bio__content__container}>    
                 <SanityBlockContent blocks={bio}/>
+                <div className={styles.quote__container }>
+                    {quote}
+                </div>
             </div>
-            <div className={styles.quote__container }>
-                {quote}
-            </div>
-            <section className={styles.videoContainer}>
-                <div></div>
-                <iframe className={styles.youtubeVideo} src={youtubeEmbed} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                <div></div>
-            </section>
-        </>
+        </div>
+        <section className={styles.videoContainer}>
+            <div></div>
+            <iframe className={styles.youtubeVideo} src={youtubeEmbed} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        </section>
+    </>
     )
 }
 

@@ -5,7 +5,7 @@
 }
 
 .bio__image__container {
-   background: #F7FAE6;
+   background-color: #757013;
    min-height: 200px;
    display: grid;
    justify-content: center;
@@ -54,4 +54,32 @@
 .youtubeVideo {
     aspect-ratio: 16 / 9;
     width: 100%;
-  }
+}
+
+
+/*  tablet ipad 1024 x  */
+@media screen and (min-width: 1024px){
+    .bio__header {
+        height: 90vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .trainerImage {
+        min-width: 300px;
+        min-height: 300px;
+    }
+
+    .videoContainer {
+        margin: 5rem 0rem;
+        display: grid;
+        grid-template-columns: 30vw 40vw 30vw;
+    }
+
+    .bio__content__container {
+        background-color: #F7FAE6;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+}

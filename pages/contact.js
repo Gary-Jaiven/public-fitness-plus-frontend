@@ -3,16 +3,12 @@ import Layout from '../components/Layout'
 
 export default function Contact(){
     return(<>
-        <section>
-          <div style={{backgroundImage: "url(/Sheila_Kalas_main.jpg)", backgroundSize: 'cover', }}>
-            <div style={{ background: "rgba(117,112,21,.9)" }}>
-              <div className={styles.contact__content}>
-                <h1>Contact Us</h1>
+        <section className={styles.container__content__one_column} style={{backgroundColor: 'white', color: '#757013'}}>
+            <div className={styles.container__content__one_column__content}>
+                <h2>Contact Us</h2>
                 <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</div>
-              </div>
             </div>
-          </div>
-        </section>
+        </section> 
         <section className={styles.contact__container}>
           <div style={{padding: '1rem 0rem'}}>
             <h1>Do Not Wait!</h1>

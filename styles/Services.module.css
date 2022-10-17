@@ -25,3 +25,22 @@
   padding: 5rem 2rem;
   background-color: #757013;
 }
+
+.container__content__one_column__content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+
+/*  tablet ipad 1024 x  */
+@media screen and (min-width: 1024px){
+  .container__content__one_column__content {
+      width: 50%;
+      display: grid;
+  }
+
+  .container__content__one_column__content h2 {
+      text-align: center;
+  }
+}

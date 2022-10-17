@@ -20,12 +20,12 @@ export const Service = ({description, title}) => {
     // },[image]);
     
 
-    return (<div className={styles.container__content}>
-            <div style={{padding: '2rem 0rem'}}>
+    return (<section className={styles.container__content__one_column} style={{backgroundColor: 'white', color: '#757013'}}>
+            <div className={styles.container__content__one_column__content} style={{color: 'black'}}>
                 <h3>{title}</h3>
                 <SanityBlockContent blocks={description}/>
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -66,3 +66,39 @@
     margin: 0.8rem 0px;
     font-family: Open Sans;
 }
+
+.container__content__one_column {
+    display: grid;
+    color: white;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 5rem 2rem;
+    background-color: #757013;
+}
+  
+.container__content__one_column__content {
+    width: 100%;
+    margin: 0 auto;
+}
+  
+  
+  
+/*  tablet ipad 1024 x  */
+@media screen and (min-width: 1024px){
+    .container__content__one_column__content {
+        width: 50%;
+        display: grid;
+    }
+
+    .container__content__one_column__content h2 {
+        text-align: center;
+    }
+
+    .form_container {
+        width: 50%;
+    }
+
+    .container__button {
+        width: 50%;
+    }
+}
