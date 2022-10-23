@@ -14,26 +14,27 @@ export default function Contact(){
             <h1>Do Not Wait!</h1>
             <p>Send us a message to get started.</p>
           </div>
-          <form className={styles.form_container}>
+          <form name="contact" action="/success" method="POSt" data-netlify="true" className={styles.form_container}>
+          <input type="hidden" name="form-name" value="contact" />
             <div className={styles.form_inputs}>
                 <label htmlFor="firstName">First Name*</label>
-                <input type="text" name="firstName" placeholder="First Name" required />
+                <input type="text" name="firstName" id="firstName" placeholder="First Name" required />
             </div>
             <div className={styles.form_inputs}>
                 <label htmlFor="lastName">Last Name*</label>
-                <input type="text" name="lastName" placeholder="Full Name" required />    
+                <input type="text" name="lastName" id="lastName" placeholder="Full Name" required />    
             </div>
             <div className={styles.form_inputs}>
               <label htmlFor='email'>Email*</label>
-              <input type="email" name="email" placeholder="Email Address" required style={{width: '100%'}}/>    
+              <input type="email" name="email" id="email" placeholder="Email Address" required style={{width: '100%'}}/>    
             </div>
             <div className={styles.form_inputs}>
               <label htmlFor='phone'>Phone Number</label>
-              <input type="phone" name="phone" placeholder="Phone Number" required style={{width: '100%'}}/>    
+              <input type="phone" name="phone" id="phone" placeholder="Phone Number" required style={{width: '100%'}}/>    
             </div>
             <div className={styles.form_inputs}>
               <label htmlFor='message'>I am interested in these services</label>
-              <textarea placeholder="Your Message" name="message" rows="10" required style={{width: '100%'}}></textarea>
+              <textarea placeholder="Your Message" name="message" id="message" rows="10" required style={{width: '100%'}}></textarea>
             </div>
             <div>
               <button className={styles.container__button} type="submit">Submit Form</button>
