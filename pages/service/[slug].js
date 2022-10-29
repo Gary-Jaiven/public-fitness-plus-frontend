@@ -5,21 +5,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import styles from '../../styles/Services.module.css'
 
 export const Service = ({description, title}) => {
-    // const [imageUrl, setImageUrl] = useState('')
-    // const youtubeEmbed = 'https://www.youtube.com/embed/' + youtube
-
-    // useEffect(() => {
-    //     const builder = imageUrlBuilder({
-    //         projectId: '3tqn9fwp',
-    //         dataset: 'production'
-    //     });
-
-    //     if(image !== null){
-    //         setImageUrl(builder.image(image));
-    //     }
-    // },[image]);
     
-
     return (<section className={styles.container__content__one_column} style={{backgroundColor: 'white', color: '#757013'}}>
             <div className={styles.container__content__one_column__content} style={{color: 'black'}}>
                 <h3>{title}</h3>

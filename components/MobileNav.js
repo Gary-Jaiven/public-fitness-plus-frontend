@@ -17,6 +17,7 @@ export default function MobileNav({setShowMobileNav, showMobileNav}) {
                 <Link href="/about"><a><li>About US</li></a></Link>
                 <Link href="/services"><a><li>Services</li></a></Link>
                 <Link href="/trainers"><a><li>Meet Your Trainers</li></a></Link>
+                <Link href="/articles"><a><li>Articles</li></a></Link>
                 <Link href="/contact"><a><li>Contact</li></a></Link>
             </ul>
         </div>

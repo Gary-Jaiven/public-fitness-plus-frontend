@@ -21,6 +21,7 @@ export default function Navbar({setShowMobileNav}){
             <Link href="/about"><a>About Us</a></Link>
             <Link href="/services"><a>Services</a></Link>
             <Link href="/trainers"><a>Meet Your Trainers</a></Link>
+            <Link href="/articles"><a>Articles</a></Link>
             <Link href="/contact"><a>Contact</a></Link>
         </div>
         <div className={styles.mobile_link_container} onClick={() => setShowMobileNav(true)}>
