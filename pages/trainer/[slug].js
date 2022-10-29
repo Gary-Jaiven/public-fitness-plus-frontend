@@ -6,7 +6,6 @@ import Image from 'next/image'
 import styles from '../../styles/Bio.module.css'
 
 export const Trainer = ({firstName, lastName, bio, image, youtube, quote}) => {
-    console.log(quote)
     const [imageUrl, setImageUrl] = useState('')
     const youtubeEmbed = 'https://www.youtube.com/embed/' + youtube
 
@@ -57,7 +56,6 @@ export const getServerSideProps = async pageContext => {
 
     const result = await fetch(url).then(res => res.json());
     const trainer = result.result[0]
-    console.log(trainer)
 
     if (!trainer) {
         return {

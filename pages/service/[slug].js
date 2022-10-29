@@ -30,7 +30,6 @@ export const getServerSideProps = async pageContext => {
 
     const result = await fetch(url).then(res => res.json());
     const service = result.result[0]
-    console.log(service)
 
     if (!service) {
         return {

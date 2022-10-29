@@ -4,10 +4,8 @@ import Link from 'next/link'
 
 
 export const Articles = ({results}) => {
-    console.log(results)
 
   const articleList = results.result.map((item, index) => {
-    console.log(item)
     return (
        <div key={index} className={styles.articleItem}>
         <Link href={`/article/${item.slug.current}`}><a className={styles.articleTitle}>{item.title}</a></Link>
@@ -30,7 +28,7 @@ export const Articles = ({results}) => {
   )
 }
 
-export const getServerSideProps = async pageContext => {
+export const getStaticProps = async pageContext => {
 
   const query = encodeURIComponent(`*[ _type == "post"]`);
   const url = `https://3tqn9fwp.api.sanity.io/v2021-10-21/data/query/production?query=${query}`;
