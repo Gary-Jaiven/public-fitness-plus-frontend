@@ -22,7 +22,7 @@
   color: white;
   grid-template-columns: 1fr;
   gap: 0.8rem;
-  padding: 5rem 2rem;
+  padding: 2rem 2rem;
   background-color: #757013;
 }
 
@@ -36,8 +36,14 @@
 /*  tablet ipad 1024 x  */
 @media screen and (min-width: 1024px){
   .container__content__one_column__content {
-      width: 50%;
+      width: 60%;
       display: grid;
+  }
+
+  .container__content {
+    width: 60%;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
 
   .container__content__one_column__content h2 {

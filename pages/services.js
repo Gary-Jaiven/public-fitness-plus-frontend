@@ -1,10 +1,14 @@
 import Layout from '../components/Layout'
 import ServiceCards from '../components/ServiceCards'
+import StrongOverCard from '../components/StrongOver50Card'
 import styles from '../styles/Services.module.css'
 
 
 export const Services = ({results}) => {
-
+  const allServices = results.result.slice(1,)
+  const strong = results.result.slice(0,1)
+  console.log(strong)
+  
   
   return (
     <div>
@@ -23,8 +27,13 @@ export const Services = ({results}) => {
             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem </p>
           </div>
         </section>
+      <section className={styles.container__content__one_column} style={{backgroundColor: 'white', color: '#757013'}}>
+        <div className={styles.container__content__one_column__content}>
+          <StrongOverCard strong={strong} />
+        </div>
+      </section>
       <section className={styles.container__content}>
-          <ServiceCards results={results} />
+          <ServiceCards allServices={allServices} />
       </section>
       <section className={styles.container__content__one_column} style={{backgroundColor: 'white', color: '#757013'}}>
         <div className={styles.container__content__one_column__content}>
@@ -42,6 +51,7 @@ export const getServerSideProps = async pageContext => {
   const url = `https://3tqn9fwp.api.sanity.io/v2021-10-21/data/query/production?query=${query}`;
 
   const result = await fetch(url).then(res => res.json());
+  console.log(result)
 
   if (!result) {
       return {
@@ -50,7 +60,7 @@ export const getServerSideProps = async pageContext => {
   } else {
       return {
           props: {
-              results: result
+              results: result,
           }
       }
   }

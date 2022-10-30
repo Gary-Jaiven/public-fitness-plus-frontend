@@ -4,7 +4,7 @@ import styles from '../styles/ServiceCard.module.css'
 import SanityBlockContent from "@sanity/block-content-to-react"
 import Link from 'next/link'
 
-const ServiceCard = (props) => {
+const StrongCard = (props) => {
     const [imageUrl, setImageUrl] = useState('') 
   
     useEffect(() => {
@@ -19,8 +19,8 @@ const ServiceCard = (props) => {
     },[props.img]);
   
     return(
-      <section className={styles.service__card}>
-        {imageUrl && <img src={imageUrl} className={styles.servicesImage} alt='Sheila' />}   
+      <section className={styles.strong__card}>
+        {imageUrl && <img src={imageUrl} className={styles.strongImage} alt='Sheila' />}   
         <div className={styles.service__card__content}>
           <h3>{props.title}</h3>
           <div><SanityBlockContent blocks={props.summary}/></div>
@@ -36,9 +36,9 @@ const ServiceCard = (props) => {
   }
 
 
-  export default function ServiceCards({allServices}){
-    const cards = allServices.map((service, index) => {
-        return <ServiceCard 
+  export default function StrongOverCard({strong}){
+    const cards = strong.map((service, index) => {
+        return <StrongCard 
             key={index}
             img={service.image}
             title={service.title}
@@ -48,7 +48,7 @@ const ServiceCard = (props) => {
     })
 
     return(
-        <div className={styles.services__container}>
+        <div className={styles.strong__container}>
             {cards}
         </div>
     )
