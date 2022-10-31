@@ -35,8 +35,6 @@ export const getStaticProps = async pageContext => {
 
   const result = await fetch(url).then(res => res.json());
 
-  // console.log(result.result[0].slug.current)
-
   if (!result) {
       return {
           notFound: true

@@ -33,7 +33,7 @@ export const Team = ({results}) => {
   )
 }
 
-export const getServerSideProps = async pageContext => {
+export const getStaticProps = async () => {
 
   const query = encodeURIComponent(`*[ _type == "trainer"] | order(order)`);
   const url = `https://3tqn9fwp.api.sanity.io/v2021-10-21/data/query/production?query=${query}`;

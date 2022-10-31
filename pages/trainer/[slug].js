@@ -5,7 +5,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import Image from 'next/image'
 import styles from '../../styles/Bio.module.css'
 
-export const Trainer = ({firstName, lastName, bio, image, youtube, quote}) => {
+export const Trainer = ({firstName, lastName, youtube, quote, bio, image}) => {
     const [imageUrl, setImageUrl] = useState('')
     const youtubeEmbed = 'https://www.youtube.com/embed/' + youtube
 
@@ -42,20 +42,42 @@ export const Trainer = ({firstName, lastName, bio, image, youtube, quote}) => {
 }
 
 
-export const getServerSideProps = async pageContext => {
-    const pageSlug = pageContext.query.slug;
-    
-    if (!pageSlug){
-        return {
-            notFound: true
-        }
-    }
 
-    const query = encodeURIComponent(`*[ _type == "trainer" && slug.current == "${pageSlug}" ]`);
+export async function getStaticPaths() {
+    const query = encodeURIComponent(`*[ _type == "trainer"]`);
+    const url = `https://3tqn9fwp.api.sanity.io/v2021-10-21/data/query/production?query=${query}`;
+
+    const results = await fetch(url).then(res => res.json());
+    const trainers = results.result
+
+
+    const paths = trainers.map((trainer) => ({
+      params: { slug: trainer.slug.current }
+    }))
+  
+    // fallback: false means pages that don’t have the
+    // correct id will 404.
+    return { paths, fallback: false }
+  }
+
+export const getStaticProps = async ({ params }) => {
+    
+    // console.log(params)
+
+    const query = encodeURIComponent(`*[ _type == "trainer"]`);
     const url = `https://3tqn9fwp.api.sanity.io/v2021-10-21/data/query/production?query=${query}`;
 
     const result = await fetch(url).then(res => res.json());
-    const trainer = result.result[0]
+    const trainers = result.result
+
+    // console.log(trainers)
+
+    const trainer = trainers.filter((trainer) => {
+        console.log(trainer.slug.current === params.slug)
+        return trainer.slug.current === params.slug
+    })
+
+    console.log(trainer)
 
     if (!trainer) {
         return {
@@ -64,12 +86,12 @@ export const getServerSideProps = async pageContext => {
     } else {
         return {
             props: {
-                bio: trainer.bio || null,
-                lastName: trainer.lastName || null,
-                firstName: trainer.firstName || null,
-                image: trainer.image || null,
-                youtube: trainer.youtube || null,
-                quote: trainer.quote || null
+                bio: trainer[0].bio || null,
+                lastName: trainer[0].lastName || null,
+                firstName: trainer[0].firstName || null,
+                image: trainer[0].image || null,
+                youtube: trainer[0].youtube || null,
+                quote: trainer[0].quote || null
             }
         }
     }
