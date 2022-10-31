@@ -61,8 +61,6 @@ export async function getStaticPaths() {
   }
 
 export const getStaticProps = async ({ params }) => {
-    
-    // console.log(params)
 
     const query = encodeURIComponent(`*[ _type == "trainer"]`);
     const url = `https://3tqn9fwp.api.sanity.io/v2021-10-21/data/query/production?query=${query}`;
@@ -70,14 +68,9 @@ export const getStaticProps = async ({ params }) => {
     const result = await fetch(url).then(res => res.json());
     const trainers = result.result
 
-    // console.log(trainers)
-
     const trainer = trainers.filter((trainer) => {
-        console.log(trainer.slug.current === params.slug)
         return trainer.slug.current === params.slug
     })
-
-    console.log(trainer)
 
     if (!trainer) {
         return {

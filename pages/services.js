@@ -7,7 +7,6 @@ import styles from '../styles/Services.module.css'
 export const Services = ({results}) => {
   const allServices = results.result.slice(1,)
   const strong = results.result.slice(0,1)
-  console.log(strong)
   
   
   return (
@@ -51,7 +50,6 @@ export const getServerSideProps = async pageContext => {
   const url = `https://3tqn9fwp.api.sanity.io/v2021-10-21/data/query/production?query=${query}`;
 
   const result = await fetch(url).then(res => res.json());
-  console.log(result)
 
   if (!result) {
       return {
