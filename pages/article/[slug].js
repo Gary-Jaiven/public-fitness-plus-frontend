@@ -5,8 +5,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import styles from '../../styles/Articles.module.css'
 import Link from 'next/link'
 
-export const Post = ({body, title}) => {
-    
+export const Post = ({body, title}) => {    
     return (<>
         <section className={styles.container__content__one_column} style={{backgroundColor: 'white', color: '#757013'}}>
             <div className={styles.container__content__one_column__content}>
@@ -25,21 +24,35 @@ export const Post = ({body, title}) => {
 }
 
 
-export const getServerSideProps = async pageContext => {
-    const pageSlug = pageContext.query.slug;
-    
-    if (!pageSlug){
-        return {
-            notFound: true
-        }
-    }
+export async function getStaticPaths() {
+    const query = encodeURIComponent(`*[ _type == "post"]`);
+    const url = `https://3tqn9fwp.api.sanity.io/v2021-10-21/data/query/production?query=${query}`;
 
-    const query = encodeURIComponent(`*[ _type == "post" && slug.current == "${pageSlug}" ]`);
+    const results = await fetch(url).then(res => res.json());
+    const posts = results.result
+
+
+    const paths = posts.map((post) => ({
+      params: { slug: post.slug.current }
+    }))
+  
+    // fallback: false means pages that don’t have the
+    // correct id will 404.
+    return { paths, fallback: false }
+  }
+
+
+export const getStaticProps = async ({ params }) => {
+    
+    const query = encodeURIComponent(`*[ _type == "post"]`);
     const url = `https://3tqn9fwp.api.sanity.io/v2021-10-21/data/query/production?query=${query}`;
 
     const result = await fetch(url).then(res => res.json());
-    const post = result.result[0]
-  
+    const posts = result.result
+
+    const post = posts.filter((post) => {
+        return post.slug.current === params.slug
+    })  
 
     if (!post) {
         return {
@@ -48,8 +61,8 @@ export const getServerSideProps = async pageContext => {
     } else {
         return {
             props: {
-                body: post.body || null,
-                title: post.title || null,
+                body: post[0].body || null,
+                title: post[0].title || null,
             }
         }
     }
