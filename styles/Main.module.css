@@ -43,6 +43,7 @@
     font-size: 1rem;
     margin: 5px 0px;
     font-family: Open Sans;
+    cursor: pointer;
   }
 
 .contactBar {
@@ -103,6 +104,7 @@
     font-size: 1rem;
     margin: 0.8rem 0px;
     font-family: Open Sans;
+    cursor: pointer;
 }
 
 .contact__container {

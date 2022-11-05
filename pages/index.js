@@ -1,6 +1,7 @@
 import styles from '../styles/Main.module.css'
 import Layout from '../components/Layout'
 import Image from 'next/image'
+import Link from 'next/link'
 import TrainerCards from '../components/TrainerCards'
 
 export const Home = ({results}) => {
@@ -11,13 +12,13 @@ export const Home = ({results}) => {
                 <div className={styles.hero__content__left}>
                   <h1 className={styles.hero__title}>Personal Training at its Finest</h1>
                   <h3 className={styles.hero__subtitle}>No Memberships. No Contracts. No Hassle.</h3>
-                  <button className={styles.hero__button}>Schedule Your Free Consultation</button>
+                  <Link href="/contact"><a><button className={styles.hero__button}>Schedule Your Free Consultation</button></a></Link>
                 </div>
                 <div className={styles.hero__content__image}>
                   <Image 
                     className={styles.hero__image}
                     src="/home_hero_image.png" 
-                    alt="Fitness Plus" 
+                    alt="Fitness Plus personal trainer helps an over 50 year old female client" 
                     width="937" 
                     height="910"
                     layout="responsive"
@@ -31,7 +32,7 @@ export const Home = ({results}) => {
             <div>
               <Image 
                 src="/home_first_image.png" 
-                alt="Fitness Plus" 
+                alt="Fitness Plus personal trainer helping an over 50 year old female do back exercises" 
                 width="526" 
                 height="518"
                 layout="responsive"
@@ -40,8 +41,8 @@ export const Home = ({results}) => {
             <div className={styles.container__content__left}>
               <div className={styles.container__content__description}>
                 <h3>Personal Training Made for You</h3>
-                <div>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</div>
-                <button className={styles.container__button}>Schedule Your Free Consultation</button>
+                <div>Working with a Fitness Plus personal trainer is more than a workout! It is a relationship with your personal health professional.</div>
+                <Link href="/contact"><a><button className={styles.container__button}>Schedule Your Free Consultation</button></a></Link>
               </div>
             </div>
           </div>
@@ -50,8 +51,10 @@ export const Home = ({results}) => {
           <div className={styles.container__content__one_column}>
             <div className={styles.container__content__one_column__content}>
               <h1>Strong Over 50</h1>
-              <div>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</div>
-              {/* <button className={styles.container__button} style={{backgroundColor: 'white', color: '#757013'}}>Schedule Your Free Consultation</button> */}
+              <div>
+                <p>Strong Over 50 is a program designed to help your body build and maintain the 3 main things you lose as you age: Strength, Flexibility and Balance.</p>
+                <p>The Strong Over 50 Body Weight Bar and training program provide a safer, more effective way for his older clients to use their own body weight to help them combat the loss of strength, flexibility and balance as they age.</p>
+              </div>
             </div>
           </div>
         </section>
@@ -60,14 +63,18 @@ export const Home = ({results}) => {
             <div className={styles.container__content__left}>
               <div className={styles.container__content__description}>
                   <h3>Committed to Improving Your Health</h3>
-                  <div>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</div>
-                  <button className={styles.container__button}>Schedule Your Free Consultation</button>
+                  <div>
+                    <p>A private consultation with one of our Fitness Plus professionals is how we begin our relationship with you. We take pride in matching you with the proper trainer.</p>
+                    <p>There are no packages to pay for upfront. You are billed at the end of the month for your training sessions. We believe our personal trainers should focus on training and not be forced to sell a quota of packages.</p>
+                    <p>Fitness Plus offers a variety of personal training and wellness services. We are committed to improving your health and fitness and our company is designed to maximize your ability to reach the goals you communicate to us.</p>  
+                    <Link href="/contact"><a><button className={styles.container__button}>Schedule Your Free Consultation</button></a></Link>
+                  </div>
               </div>
             </div>
             <div>
               <Image 
                   src="/home_second_image.png" 
-                  alt="Fitness Plus" 
+                  alt="Fitness Plus personal trainer helping a female client in a Strong Over 50 Program exercise." 
                   width="674" 
                   height="556"
                   layout="responsive"
