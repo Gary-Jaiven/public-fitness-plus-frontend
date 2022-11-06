@@ -63,14 +63,20 @@ export const getStaticProps = async ({ params }) => {
             props: {
                 body: post[0].body || null,
                 title: post[0].title || null,
+                metaTags: post[0].metaTags || null,
             }
         }
     }
 };
 
 Post.getLayout = function getLayout(page) {    
+    const theMeta = page.props.metaTags ?? {title: 'no title', description: 'no description'}
+
     return (
-      <Layout >
+      <Layout 
+        pageTitle={theMeta.title}
+        pageDescription={theMeta.description}
+      >
         {page}
       </Layout>
     )

@@ -22,7 +22,7 @@ const StrongCard = (props) => {
       <section className={styles.strong__card}>
         {imageUrl && <img src={imageUrl} className={styles.strongImage} alt='Sheila' />}   
         <div className={styles.service__card__content}>
-          <h3>{props.title}</h3>
+          <h3 style={{margin: '1rem 0'}}>{props.title}</h3>
           <div><SanityBlockContent blocks={props.summary}/></div>
             <Link href={{
                 pathname: '/service/[slug]',

@@ -99,7 +99,7 @@ export const getStaticProps = async ({ params }) => {
 
 Trainer.getLayout = function getLayout(page) {
     const theMeta = page.props.metaTags ?? {title: 'no title', description: 'no description'}
-    console.log(page)
+    
     return (
       <Layout 
         pageTitle={theMeta.title}

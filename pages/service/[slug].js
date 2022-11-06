@@ -44,14 +44,20 @@ export const getServerSideProps = async pageContext => {
             props: {
                 description: service.description || null,
                 title: service.title || null,
+                metaTags: service.metaTags || null,
             }
         }
     }
 };
 
 Service.getLayout = function getLayout(page) {    
+    const theMeta = page.props.metaTags ?? {title: 'no title', description: 'no description'}
+
     return (
-      <Layout >
+      <Layout 
+        pageTitle={theMeta.title}
+        pageDescription={theMeta.description}
+      >
         {page}
       </Layout>
     )
