@@ -23,7 +23,7 @@ export default function Layout({ children, pageTitle, pageDescription }) {
       <Head>
         <title>{title}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name={description} />
+        <meta name="description" content={description} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header setShowMobileNav={setShowMobileNav}></Header>
