@@ -70,7 +70,10 @@ export const getServerSideProps = async pageContext => {
     
 Services.getLayout = function getLayout(page){
   return (
-    <Layout>
+    <Layout
+      pageTitle="Fitness Plus Services"
+      pageDescription="At Fitness Plus, each and every client gets one-on-one personal training. One training session at a time, at the frequency of your choosing."
+    >
       {page}
     </Layout>
   )

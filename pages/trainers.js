@@ -55,7 +55,10 @@ export const getStaticProps = async () => {
 
 Team.getLayout = function getLayout(page){
   return (
-    <Layout>
+    <Layout
+      pageTitle="Fitness Plus Trainers"
+      pageDescription="The personal trainers at Fitness Plus are educated and experienced in the profession of personal training."
+    >
       {page}
     </Layout>
   )

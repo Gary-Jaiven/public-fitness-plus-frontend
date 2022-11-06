@@ -145,7 +145,10 @@ export const getServerSideProps = async pageContext => {
 
 Home.getLayout = function getLayout(page){
   return (
-    <Layout>
+    <Layout
+      pageTitle="Fitness Plus"
+      pageDescription="No membership fees. No contracts. Just individual attention, one session at a time, with your experienced and educated personal trainer."
+    >
       {page}
     </Layout>
   )

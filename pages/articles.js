@@ -51,7 +51,10 @@ export const getStaticProps = async pageContext => {
     
 Articles.getLayout = function getLayout(page){
   return (
-    <Layout>
+    <Layout
+      pageTitle="Articles"
+      pageDescription="Learn from Fitness Plus trainers on how to live healthy and stay fit"
+    >
       {page}
     </Layout>
   )

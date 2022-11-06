@@ -15,7 +15,10 @@ export default function Contact(){
 
 Contact.getLayout = function getLayout(page){
   return (
-    <Layout>
+    <Layout
+      pageTitle="Thank You"
+      pageDescription="Thank you for contacting Fitness Plus in Lexington, Kentucky"
+    >
       {page}
     </Layout>
   )

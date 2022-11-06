@@ -76,6 +76,8 @@ export const getStaticProps = async ({ params }) => {
         return trainer.slug.current === params.slug
     })
 
+    console.log(trainer)
+
     if (!trainer) {
         return {
             notFound: true
@@ -88,19 +90,20 @@ export const getStaticProps = async ({ params }) => {
                 firstName: trainer[0].firstName || null,
                 image: trainer[0].image || null,
                 youtube: trainer[0].youtube || null,
-                quote: trainer[0].quote || null
+                quote: trainer[0].quote || null,
+                metaTags: trainer[0].metaTags || null
             }
         }
     }
 };
 
 Trainer.getLayout = function getLayout(page) {
-    // const theMeta = page.props.children[2].props.metaTags ?? {title: 'no title', description: 'no description'}
-    
+    const theMeta = page.props.metaTags ?? {title: 'no title', description: 'no description'}
+    console.log(page)
     return (
       <Layout 
-        // pageTitle={theMeta.title}
-        // pageDescription={theMeta.description}
+        pageTitle={theMeta.title}
+        pageDescription={theMeta.description}
       >
         {page}
       </Layout>

@@ -48,7 +48,10 @@ export default function Contact(){
 
 Contact.getLayout = function getLayout(page){
   return (
-    <Layout>
+    <Layout
+      pageTitle="Contact Fitness Plus"
+      pageDescription="Contact us to get started. A private consultation with one of our Fitness Plus professionals is how we begin our relationship with you."
+    >
       {page}
     </Layout>
   )

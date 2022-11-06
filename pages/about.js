@@ -78,7 +78,10 @@ export default function About() {
 
 About.getLayout = function getLayout(page){
   return (
-    <Layout>
+    <Layout
+      pageTitle="About Fitness Plus"
+      pageDescription="Fitness Plus is a personal training and wellness company in Lexington, Kentucky, founded in 1995 by Sheila Kalas"
+    >
       {page}
     </Layout>
   )
