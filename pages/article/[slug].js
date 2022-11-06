@@ -9,7 +9,7 @@ export const Post = ({body, title}) => {
     return (<>
         <section className={styles.container__content__one_column} style={{backgroundColor: 'white', color: '#757013'}}>
             <div className={styles.container__content__one_column__content}>
-                <h2>Lorem ipsum dolor sit amet</h2>
+                <h2>No memberships. No contracts.</h2>
                 <Link href='/contact'><button className='button' style={{margin: '0 auto'}}>Schedule Your Free Consultation.</button></Link>
             </div>
         </section>

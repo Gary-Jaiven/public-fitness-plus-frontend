@@ -16,8 +16,8 @@ export const Team = ({results}) => {
         </section> */}
         <section className={styles.container__content__one_column} style={{backgroundColor: 'white', color: '#757013'}}>
           <div className={styles.container__content__one_column__content}>
-            <h2>Lorem ipsum dolor sit amet</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem </p>
+            <h2>Fitness Plus Trainers</h2>
+            <p>The personal trainers at Fitness Plus are educated and experienced in the profession of personal training. They understand that “training” is more than “working out.” They will talk to you, listen to you, assess your present condition, and develop a plan and program to help you reached your desired goals with evidence-based training techniques. Our trainers take their profession and your time and money seriously. Each of our trainers has different areas of expertise; read through the bios to see which trainer you would like to work with and begin your journey towards better health and fitness.</p>
           </div>
         </section>
         <section className={styles.container__content}>

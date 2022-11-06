@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import Layout from '../../components/Layout'
 import SanityBlockContent from "@sanity/block-content-to-react"
 import imageUrlBuilder from '@sanity/image-url'
@@ -10,6 +11,9 @@ export const Service = ({description, title}) => {
             <div className={styles.container__content__one_column__content} style={{color: 'black'}}>
                 <h3>{title}</h3>
                 <SanityBlockContent blocks={description}/>
+            </div>                
+            <div style={{display: 'grid', justifyContent: 'center'}}>
+                <Link href="/contact"><a><button className='button' style={{cursor: 'pointer'}}>Schedule Your Free Consultation</button></a></Link>
             </div>
         </section>
     )

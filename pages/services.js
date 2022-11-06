@@ -1,4 +1,5 @@
 import Layout from '../components/Layout'
+import Link from 'next/link'
 import ServiceCards from '../components/ServiceCards'
 import StrongOverCard from '../components/StrongOver50Card'
 import styles from '../styles/Services.module.css'
@@ -22,8 +23,8 @@ export const Services = ({results}) => {
       </section>
       <section className={styles.container__content__one_column} style={{backgroundColor: 'white', color: '#757013'}}>
           <div className={styles.container__content__one_column__content}>
-            <h2 style={{textAlign: 'center'}}>Lorem ipsum dolor sit amet</h2>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem </p>
+            <h2 style={{textAlign: 'center'}}>No memberships. No contracts.</h2>
+            <p style={{textAlign: 'center'}}>At Fitness Plus, each and every client gets one-on-one personal training. One training session at a time, at the frequency of your choosing. Some clients train once a week and others once a day.</p>
           </div>
         </section>
       <section className={styles.container__content__one_column} style={{backgroundColor: 'white', color: '#757013'}}>
@@ -36,8 +37,10 @@ export const Services = ({results}) => {
       </section>
       <section className={styles.container__content__one_column} style={{backgroundColor: 'white', color: '#757013'}}>
         <div className={styles.container__content__one_column__content}>
-          <h2>Lorem ipsum dolor sit amet</h2>
-          <button className='button' style={{margin: '0 auto'}}>Schedule Your Free Consultation.</button>
+          <div className='sub_title_black' style={{textAlign: 'center', marginBottom: '1rem'}}>Lorem ipsum dolor sit amet</div>
+          <div style={{display: 'grid', justifyContent: 'center'}}>
+            <Link href="/contact"><a><button className='button' style={{cursor: 'pointer'}}>Schedule Your Free Consultation</button></a></Link>
+          </div>
         </div>
       </section>
     </div>

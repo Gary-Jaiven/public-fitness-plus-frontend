@@ -6,7 +6,7 @@ export default function Contact(){
         <section className={styles.container__content__one_column} style={{backgroundColor: 'white', color: '#757013'}}>
             <div className={styles.container__content__one_column__content}>
                 <h2>Contact Us</h2>
-                <div>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</div>
+                <div>A private consultation with one of our professionals is how we begin our relationship with you. We take pride in matching you with the proper trainer. After you have met with your trainer and been briefed on our business policies and have discussed any and all pertinent medical history, it is time to begin the design of your fitness program.</div>
             </div>
         </section> 
         <section className={styles.contact__container}>

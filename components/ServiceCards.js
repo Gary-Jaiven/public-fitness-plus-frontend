@@ -28,7 +28,7 @@ const ServiceCard = (props) => {
                 pathname: '/service/[slug]',
                 query: {slug: `${props.slug.current}`}
             }}>
-                <a><button className={styles.service__card__button} style={{margin: '1rem auto'}}>Learn more.</button></a>
+                <a><button className={styles.service__card__button} style={{margin: '1rem auto', cursor: 'pointer'}}>Learn more.</button></a>
             </Link>
         </div>
       </section>
