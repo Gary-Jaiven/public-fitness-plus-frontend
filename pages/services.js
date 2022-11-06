@@ -37,7 +37,7 @@ export const Services = ({results}) => {
       </section>
       <section className={styles.container__content__one_column} style={{backgroundColor: 'white', color: '#757013'}}>
         <div className={styles.container__content__one_column__content}>
-          <div className='sub_title_black' style={{textAlign: 'center', marginBottom: '1rem'}}>Lorem ipsum dolor sit amet</div>
+          <div className='sub_title_black' style={{textAlign: 'center', marginBottom: '1rem'}}>No memberships. No contracts.</div>
           <div style={{display: 'grid', justifyContent: 'center'}}>
             <Link href="/contact"><a><button className='button' style={{cursor: 'pointer'}}>Schedule Your Free Consultation</button></a></Link>
           </div>

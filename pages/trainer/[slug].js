@@ -3,6 +3,7 @@ import Layout from '../../components/Layout'
 import SanityBlockContent from "@sanity/block-content-to-react"
 import imageUrlBuilder from '@sanity/image-url'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../../styles/Bio.module.css'
 
 export const Trainer = ({firstName, lastName, youtube, quote, bio, image}) => {
@@ -24,13 +25,16 @@ export const Trainer = ({firstName, lastName, youtube, quote, bio, image}) => {
     return (<>
         <div className={styles.bio__header}>
             <div className={styles.bio__image__container}>
-            {imageUrl && <img src={imageUrl} className={styles.trainerImage} alt='Sheila' />}
+                {imageUrl && <img src={imageUrl} className={styles.trainerImage} alt='Sheila' />}
             </div>
             <div className={styles.bio__content__container}>    
                 <SanityBlockContent blocks={bio}/>
                 <div className={styles.quote__container }>
                     {quote}
                 </div>
+                <div style={{display: 'grid', justifyContent: 'center'}}>
+                    <Link href="/contact"><a><button className='button' style={{cursor: 'pointer'}}>Schedule Your Free Consultation</button></a></Link>
+                </div>  
             </div>
         </div>
         <section className={styles.videoContainer}>
