@@ -25,7 +25,6 @@ export const Team = ({results}) => {
         </section>
         <section className={styles.container__content__one_column} style={{backgroundColor: 'white', color: '#757013'}}>
           <div className={styles.container__content__one_column__content}>
-            <h2>Lorem ipsum dolor sit amet</h2>
             <button className='button' style={{margin: '0 auto'}}>Schedule Your Free Consultation.</button>
           </div>
         </section>
