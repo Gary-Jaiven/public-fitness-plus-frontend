@@ -14,7 +14,7 @@ export default function Contact(){
             <h1>Do Not Wait!</h1>
             <p>Send us a message to get started.</p>
           </div>
-          <form name="contact" action="/success" method="POSt" data-netlify="true" className={styles.form_container}>
+          <form name="contact" action="/success" method="POST" data-netlify="true" className={styles.form_container}>
           <input type="hidden" name="form-name" value="contact" />
             <div className={styles.form_inputs}>
                 <label htmlFor="firstName">First Name*</label>
@@ -29,7 +29,7 @@ export default function Contact(){
               <input type="email" name="email" id="email" placeholder="Email Address" required style={{width: '100%'}}/>    
             </div>
             <div className={styles.form_inputs}>
-              <label htmlFor='phone'>Phone Number</label>
+              <label htmlFor='phone'>Phone Number*</label>
               <input type="phone" name="phone" id="phone" placeholder="Phone Number" required style={{width: '100%'}}/>    
             </div>
             <div className={styles.form_inputs}>
