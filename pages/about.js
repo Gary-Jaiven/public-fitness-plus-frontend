@@ -2,6 +2,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Main.module.css'
 import Layout from '../components/Layout'
+import aboutImage1 from '../public/aboutImage1.png'
+import aboutImage2 from '../public/aboutImage2.png'
+import aboutImage3 from '../public/Rob_RoseMarie.png'
 
 export default function About() {
   return (
@@ -23,12 +26,12 @@ export default function About() {
             <Link href="/contact"><a><button className={styles.container__button}>Schedule Your Free Consultation</button></a></Link>
           </div>
           <div>
-            <Image src={"/aboutImage1.png"} alt="Sheila Kalas stands in front of the Fitness Plus Personal Training Studio" layout='responsive' width='500' height='365'/>
+            <Image src={aboutImage1} alt="Sheila Kalas stands in front of the Fitness Plus Personal Training Studio" layout='responsive'/>
           </div>
         </section>
         <section className='section_content_two_column'>
           <div>
-            <Image src={"/aboutImage2.png"} alt="A female trainer in Lexington, KY helps with a Strong Over 50 client" layout='responsive' width='500' height='365' />
+            <Image src={aboutImage2} alt="A female trainer in Lexington, KY helps with a Strong Over 50 client" layout='responsive'/>
           </div>
           <div style={{display: 'grid', alignContent: 'center'}}>
             <h3>How it Works</h3>
@@ -48,7 +51,7 @@ export default function About() {
             <p>If you are searching for a solution and need clarity, we explain it this way: Fitness Plus is a fitness and wellness company that will listen to you.</p>
           </div>
           <div>
-            <Image src={"/Rob_RoseMarie.png"} alt="A male trainer encourages his client" layout='responsive' width='500' height='365' />
+            <Image src={aboutImage3} alt="A male trainer encourages his client" layout='responsive'/>
           </div>
         </section>
       </div>
