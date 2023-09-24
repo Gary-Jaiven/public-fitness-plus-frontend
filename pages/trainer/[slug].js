@@ -76,8 +76,6 @@ export const getStaticProps = async ({ params }) => {
         return trainer.slug.current === params.slug
     })
 
-    console.log(trainer)
-
     if (!trainer) {
         return {
             notFound: true
