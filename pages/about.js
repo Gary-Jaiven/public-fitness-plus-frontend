@@ -26,12 +26,12 @@ export default function About() {
             <Link href="/contact"><a><button className={styles.container__button}>Schedule Your Free Consultation</button></a></Link>
           </div>
           <div>
-            <Image src={aboutImage1} alt="Sheila Kalas stands in front of the Fitness Plus Personal Training Studio" layout='responsive'/>
+            <Image src={aboutImage2} alt="Sheila Kalas stands in front of the Fitness Plus Personal Training Studio" layout='responsive'/>
           </div>
         </section>
         <section className='section_content_two_column'>
           <div>
-            <Image src={aboutImage2} alt="A female trainer in Lexington, KY helps with a Strong Over 50 client" layout='responsive'/>
+            <Image src={aboutImage1} alt="A female trainer in Lexington, KY helps with a Strong Over 50 client" layout='responsive'/>
           </div>
           <div style={{display: 'grid', alignContent: 'center'}}>
             <h3>How it Works</h3>
