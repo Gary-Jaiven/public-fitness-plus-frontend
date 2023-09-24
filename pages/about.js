@@ -48,7 +48,7 @@ export default function About() {
             <p>If you are searching for a solution and need clarity, we explain it this way: Fitness Plus is a fitness and wellness company that will listen to you.</p>
           </div>
           <div>
-            <Image src={"/aboutImage2.png"} alt="A male trainer encourages his client" layout='responsive' width='500' height='365' />
+            <Image src={"/Rob_RoseMarie.png"} alt="A male trainer encourages his client" layout='responsive' width='500' height='365' />
           </div>
         </section>
       </div>
